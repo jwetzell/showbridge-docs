@@ -1,0 +1,9 @@
+---
+title: Config
+sidebar:
+  order: 2
+---
+The showbridge router's config is entirely controlled by a YAML/JSON config file. This file must be made by hand for now. I do provide some starter/example configs to look at to get a general idea of what one entails. 
+
+Resources
+- good idea to start with [config.yaml](https://github.com/jwetzell/showbridge-go/blob/main/config.yaml)

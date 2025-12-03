@@ -1,0 +1,41 @@
+---
+title: CLI
+sidebar:
+  order: 1
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+<Steps>
+
+1. install
+
+    - via go: `go install github.com/jwetzell/showbridge-go/cmd/showbridge@latest`
+
+    - [binaries](https://github.com/jwetzell/showbridge-go/releases/latest)
+
+2. create a config file (see [config](/reference/config/))
+
+
+3. run
+
+    - `showbridge --config config.yaml`
+
+    - see below for all flags
+
+    - use the `-h` flag to see other available flags
+
+</Steps>
+
+```
+NAME:
+   showbridge - Simple protocol router /s
+
+USAGE:
+   showbridge [global options]
+
+GLOBAL OPTIONS:
+   --config string  (default: "./config.yaml")
+   --help, -h       show help
+
+```
