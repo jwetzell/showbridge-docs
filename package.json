@@ -9,7 +9,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
-    "build:prod": "astro check && astro build --base /docs",
+    "build:prod": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

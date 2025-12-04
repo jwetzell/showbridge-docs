@@ -30,6 +30,6 @@ jobs:
           username: ${{secrets.DOCS_FTP_USERNAME}}
           password: ${{secrets.DOCS_FTP_PASSWORD}}
           local-dir: ./dist/
-          server-dir: docs/
+          server-dir: ./
           port: 21
           protocol: ftps
