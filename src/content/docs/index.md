@@ -1,5 +1,5 @@
 ---
-title: Showbridge
+title: showbridge
 sidebar:
   order: 1
 ---
