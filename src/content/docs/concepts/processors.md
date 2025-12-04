@@ -1,0 +1,13 @@
+---
+title: Processors
+sidebar:
+    order: 4
+---
+
+Processors are anything that create or manipulate messages. They are configured in the `processors` property of an individual [route](/reference/routes). Processors have the ability to change the type of the message flowing through the system so a byte array can come into a `osc.message.decode` processor and a OSC message type will come out of the processor.
+
+## YAML Definition
+A processor YAML block has the following properties
+
+- **type**: the processor type
+- **params**: optional map for processor configuration values. The valid values will depend on the processor type

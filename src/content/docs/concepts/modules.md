@@ -1,0 +1,14 @@
+---
+title: Modules
+sidebar:
+    order: 2
+---
+
+Modules are anything that can produce input and/or handle output. They are configured in the `modules` property of the [router config file](/reference/config).
+
+## YAML Definition
+A module YAML block has the following properties
+
+- **id**: user assigned unique identifier that will be used to reference a module instance in a [route](/reference/routes)
+- **type**: the module type
+- **params**: optional map for module configuration values. The valid values will depend on the module type

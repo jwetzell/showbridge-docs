@@ -1,7 +1,7 @@
 ---
 title: Config
 sidebar:
-  order: 2
+    order: 1
 ---
 The showbridge router's config is entirely controlled by a YAML/JSON config file. This file must be made by hand for now. I do provide some starter/example configs to look at to get a general idea of what one entails. 
 
