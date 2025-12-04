@@ -43,6 +43,21 @@ export default defineConfig({
           ]
         },
         {
+          label: 'Processors',
+          items: [
+            {
+              label: "OSC",
+              collapsed: true,
+              autogenerate: { directory: 'processors/osc' }
+            },
+            {
+              label: "String",
+              collapsed: true,
+              autogenerate: { directory: 'processors/string' }
+            },
+          ]
+        },
+        {
           label: 'Examples',
           autogenerate: { directory: 'examples' },
         },
