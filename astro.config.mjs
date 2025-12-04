@@ -40,11 +40,6 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'modules/network' }
             },
-            {
-              label: "Misc",
-              collapsed: true,
-              autogenerate: { directory: 'modules/misc' }
-            },
           ]
         },
         {
