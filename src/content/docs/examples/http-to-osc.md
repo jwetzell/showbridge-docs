@@ -8,7 +8,7 @@ This config starts an HTTP server listening on port `3000`. Any HTTP request com
 # config.yaml
 modules:
   - id: http
-    type: net.http.server
+    type: http.server
     params:
       port: 3000
   - id: udp
