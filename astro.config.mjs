@@ -40,6 +40,11 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'modules/network' }
             },
+            {
+              label: "HTTP",
+              collapsed: true,
+              autogenerate: { directory: 'modules/http' }
+            },
           ]
         },
         {

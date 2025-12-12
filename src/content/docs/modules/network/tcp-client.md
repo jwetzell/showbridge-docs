@@ -1,7 +1,7 @@
 ---
 title: TCP Client
 sidebar:
-    order: 3
+    order: 1
 ---
 The TCP client module connects to TCP server and emits a message for every message it receives from the server that it connects to. Messages are determined by "framing" techniques as TCP is a stream based protocol. The module will attempt to reconnect anytime the connection is closed.
 

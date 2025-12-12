@@ -1,7 +1,7 @@
 ---
 title: UDP Server
 sidebar:
-    order: 6
+    order: 4
 ---
 The UDP server module emits a message for every incoming UDP datagram.
 

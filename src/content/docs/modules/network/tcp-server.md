@@ -1,7 +1,7 @@
 ---
 title: TCP Server
 sidebar:
-    order: 4
+    order: 2
 ---
 The TCP server module emits a message for every message it receives from clients that connect to it. Messages are determined by "framing" techniques as TCP is a stream based protocol.
 

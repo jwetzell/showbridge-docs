@@ -1,7 +1,7 @@
 ---
 title: UDP Client
 sidebar:
-    order: 5
+    order: 3
 ---
 The UDP client module sends messages to a the configured `host` and `port`. This module does not receive any message and so using it as an `input` to a [route](/concepts/routes) would be pointless.
 
