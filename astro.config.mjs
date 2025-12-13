@@ -53,7 +53,13 @@ export default defineConfig({
             {
               label: "OSC",
               collapsed: true,
-              autogenerate: { directory: 'processors/osc' }
+              items: [
+                {
+                  label: "Message",
+                  collapsed: true,
+                  autogenerate: { directory: 'processors/osc/message' }
+                }
+              ]
             },
             {
               label: "String",
