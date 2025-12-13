@@ -3,7 +3,7 @@ title: Encode
 sidebar:
     order: 2
 ---
-The string encode processor takes a string and turns it into an array of bytes. This processor will return an error if the message being processed is not a string.
+The `string.encode` processor takes a string and turns it into an array of bytes. This processor will return an error if the message being processed is not a string.
 
 - **type**: `string.encode`
 
