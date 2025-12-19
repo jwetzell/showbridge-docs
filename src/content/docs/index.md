@@ -4,4 +4,8 @@ sidebar:
   order: 1
 ---
 
-Welcome to the showbridge docs, this is an ever changing store of information related to [showbridge](https://github.com/jwetzell/showbridge-go). If you find something that doesn't make sense or needs more documentation/clarification please open an issue on the [docs repo](https://github.com/jwetzell/showbridge-docs/issues). For issues not related to the actual application please open them on the [showbridge repo](https://github.com/jwetzell/showbridge-go)
+Welcome to the showbridge docs, this is an ever changing store of information related to [showbridge](https://github.com/jwetzell/showbridge-go). 
+
+If you find something that doesn't make sense or needs more documentation/clarification please open an issue on the [docs repo](https://github.com/jwetzell/showbridge-docs/issues). 
+
+For issues related to the actual application please open them on the [showbridge repo](https://github.com/jwetzell/showbridge-go)
