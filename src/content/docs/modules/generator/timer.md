@@ -3,7 +3,7 @@ title: Timer
 sidebar:
     order: 1
 ---
-The timer module emits only one message after a specified duration
+The `gen.timer` module emits only one message after a specified duration. Output to this module currently does nothing.
 
 - **type**: `gen.timer`
 - **params**:

@@ -3,7 +3,7 @@ title: UDP Server
 sidebar:
     order: 4
 ---
-The UDP server module emits a message for every incoming UDP datagram.
+The `net.udp.server` module emits a message for every incoming UDP datagram.
 
 - **type**: `net.udp.server`
 - **params**:

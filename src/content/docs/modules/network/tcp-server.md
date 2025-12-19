@@ -3,7 +3,7 @@ title: TCP Server
 sidebar:
     order: 2
 ---
-The TCP server module emits a message for every message it receives from clients that connect to it. Messages are determined by "framing" techniques as TCP is a stream based protocol.
+The `net.tcp.server` module emits a message messages based on the data it receives from clients that connect to it. Messages are determined by "framing" techniques as TCP is a stream based protocol.
 
 - **type**: `net.tcp.server`
 - **params**:
@@ -14,6 +14,8 @@ The TCP server module emits a message for every message it receives from clients
         - CR `\r`
         - CRLF `\r\n`
         - [SLIP](https://en.wikipedia.org/wiki/Serial_Line_Internet_Protocol)
+        - RAW (no framing is done bytes are sent out as they are received)
+
 
 ### Example
 Start a TCP server listening on port 8888, incoming data will be split on line-feed (`\n`)

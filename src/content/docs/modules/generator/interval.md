@@ -3,7 +3,7 @@ title: Interval
 sidebar:
     order: 2
 ---
-The interval module emits a message at a specified duration
+The `gen.interval` module emits a message at a specified duration
 
 - **type**: `gen.interval`
 - **params**:
