@@ -45,6 +45,11 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'modules/http' }
             },
+            {
+              label: "MIDI",
+              collapsed: true,
+              autogenerate: { directory: 'modules/midi' }
+            },
           ]
         },
         {

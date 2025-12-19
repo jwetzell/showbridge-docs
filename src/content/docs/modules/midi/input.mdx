@@ -1,0 +1,26 @@
+---
+title: MIDI Input
+sidebar:
+    order: 1
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="caution">
+This module is not currently included in the pre-compiled binaries for [showbridge](https://github.com/jwetzell/showbridge-go/releases/latest)
+</Aside>
+
+The `midi.input` module connects to a midi device (or virtual device) and emits MIDI messages that come in on that port. This module does not output any message and so using it as an `output` of a [route](/concepts/routes) would be pointless.
+
+- **type**: `midi.input`
+- **params**:
+    - **port**: name of the MIDI port to connect to
+
+### Example
+Open a MIDI connection to `Logic Pro Virtual Out`.
+```
+- id: midiInput
+  type: midi.input
+  params:
+    port: "Logic Pro Virtual Out"
+```
