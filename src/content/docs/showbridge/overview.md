@@ -23,4 +23,7 @@ showbridge is a kind of re-imagining of [OSCulator](https://osculator.net/) take
 - [PosiStageNet](https://posistage.net/)
   - client
 - MIDI
-  - client (not included in pre-built binaries yet) 
+  - input (not included in pre-built binaries yet) 
+  - output (not included in pre-built binaries yet) 
+- Serial
+  - client (not included in pre-built binaries yet)
