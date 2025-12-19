@@ -1,0 +1,35 @@
+---
+title: Serial Client
+sidebar:
+    order: 1
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+<Aside type="caution">
+This module is not currently included in the pre-compiled binaries for [showbridge](https://github.com/jwetzell/showbridge-go/releases/latest)
+</Aside>
+
+The `serial.client` module connects to a serial device and emits a message messages based on the data it receives from the port. Messages are determined by "framing" techniques as serial is a stream based protocol.
+
+- **type**: `serial.client`
+- **params**:
+    - **port**: serial port to connect to i.e `/dev/ttyS0`
+    - **baudRate** baud rate to use when connecting to serial port
+    - **framing**: how to chunk the serial stream into "messages"
+        - LF `\n`
+        - CR `\r`
+        - CRLF `\r\n`
+        - [SLIP](https://en.wikipedia.org/wiki/Serial_Line_Internet_Protocol)
+        - RAW (no framing is done bytes are sent out as they are received)
+
+### Example
+Open a serial connection to `/dev/ttyS0` with a buad rate of `115200`, any incoming data will be split on line-feed (`\n`)
+```
+- id: serialClient
+  type: serial.client
+  params:
+    port: "/dev/ttyS0"
+    baudRate: 115200
+    framing: LF
+```

@@ -50,6 +50,11 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'modules/midi' }
             },
+            {
+              label: "Serial",
+              collapsed: true,
+              autogenerate: { directory: 'modules/serial' }
+            },
           ]
         },
         {
