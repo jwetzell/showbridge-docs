@@ -55,6 +55,11 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'modules/serial' }
             },
+            {
+              label: "MQTT",
+              collapsed: true,
+              autogenerate: { directory: 'modules/mqtt' }
+            },
           ]
         },
         {

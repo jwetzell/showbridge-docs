@@ -1,0 +1,24 @@
+---
+title: MQTT Client
+sidebar:
+    order: 1
+---
+
+The `mqtt.client` module connects to a MQTT broker and emits a message messages based on the subscribed topic it receives from the port. This module is also capable of publishing MQTT messages to the connected broker.
+
+- **type**: `mqtt.client`
+- **params**:
+    - **broker**: connection string for the mqtt broker (`mqtt://test.mosquitto.org:1833`)
+    - **topic** mqtt topic to subscribe to
+    - **clientId** client ID for this connection to the broker
+
+### Example
+Open a mqtt connection to `test.mosquitto.org` subscribing to the `showbridge` topic.
+```
+- id: mqttClient
+  type: mqtt.client
+  params:
+    broker: "mqtt://test.mosquitto.org:1833"
+    topic: showbridge
+    clientId: showbridge
+```
