@@ -1,5 +1,5 @@
 ---
-title: Decode
+title: OSC Message Decode
 sidebar:
     order: 1
 ---

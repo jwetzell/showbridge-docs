@@ -1,5 +1,5 @@
 ---
-title: Encode
+title: String Encode
 sidebar:
     order: 2
 ---

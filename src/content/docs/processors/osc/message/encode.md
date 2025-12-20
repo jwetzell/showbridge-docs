@@ -1,5 +1,5 @@
 ---
-title: Encode
+title: OSC Message Encode
 sidebar:
     order: 2
 ---

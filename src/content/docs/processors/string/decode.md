@@ -1,5 +1,5 @@
 ---
-title: Decode
+title: String Decode
 sidebar:
     order: 1
 ---

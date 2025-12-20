@@ -1,5 +1,5 @@
 ---
-title: Filter
+title: OSC Message Filter
 sidebar:
     order: 3
 ---
