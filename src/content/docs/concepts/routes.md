@@ -9,6 +9,6 @@ Routes take the messages coming from a module and push them out another module. 
 ## YAML Definition
 - **input**: the id of the [module](/concepts/modules) that will provide messages to this route
 - **processors**: (optional) array of [processors](/concepts/processors) that will be called in order and the result of the previous will be fed to the next processor.
-  - if at any point the output of a processor is `null` the entire route will be terminated (subject to change to support output `null` values?)
+  - if at any point the output of a processor is `nil` the entire route will be terminated (subject to change to support output `nil` values?)
   - an error in a processor step will also result in the route being terminated
 - **output**: the id of the [module](/concepts/modules) that will consume messages from the route
