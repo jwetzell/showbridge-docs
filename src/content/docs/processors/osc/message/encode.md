@@ -3,7 +3,7 @@ title: OSC Message Encode
 sidebar:
     order: 2
 ---
-The `osc.message.encode` module takes an OSC message and turns it into an array of bytes. This processor will return an error if the OSC message cannot be turned into bytes.
+The `osc.message.encode` processor takes an OSC message and turns it into an array of bytes. This processor will return an error if the OSC message cannot be turned into bytes.
 
 - **type**: `osc.message.encode`
 
