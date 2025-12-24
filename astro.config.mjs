@@ -81,6 +81,11 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'processors/string' }
             },
+            {
+              label: "Script",
+              collapsed: true,
+              autogenerate: { directory: 'processors/script' }
+            },
           ]
         },
         {
