@@ -3,7 +3,7 @@ title: Timer
 sidebar:
     order: 1
 ---
-The `gen.timer` module emits only one message after a specified duration. Output to this module currently does nothing.
+The `gen.timer` module emits only one message after a specified duration. Sending any message to this module will reset the timer.
 
 - **type**: `gen.timer`
 - **params**:
