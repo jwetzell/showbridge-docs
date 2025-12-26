@@ -31,9 +31,9 @@ export default defineConfig({
           label: 'Modules',
           items: [
             {
-              label: "Generator",
+              label: "Time",
               collapsed: true,
-              autogenerate: { directory: 'modules/generator' }
+              autogenerate: { directory: 'modules/time' }
             },
             {
               label: "Network",
