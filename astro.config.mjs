@@ -66,6 +66,16 @@ export default defineConfig({
           label: 'Processors',
           items: [
             {
+              label: "Int",
+              collapsed: true,
+              autogenerate: { directory: 'processors/int' }
+            },
+            {
+              label: "Float",
+              collapsed: true,
+              autogenerate: { directory: 'processors/float' }
+            },
+            {
               label: "OSC",
               collapsed: true,
               items: [
@@ -86,6 +96,16 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'processors/script' }
             },
+            {
+              label: "Time",
+              collapsed: true,
+              autogenerate: { directory: 'processors/time' }
+            },
+            {
+              label: "Uint",
+              collapsed: true,
+              autogenerate: { directory: 'processors/uint' }
+            }
           ]
         },
         {
