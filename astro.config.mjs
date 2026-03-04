@@ -101,11 +101,6 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'processors/time' }
             },
-            {
-              label: "Uint",
-              collapsed: true,
-              autogenerate: { directory: 'processors/uint' }
-            }
           ]
         },
         {
