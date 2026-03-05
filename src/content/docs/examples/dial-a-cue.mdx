@@ -24,9 +24,11 @@ routes:
     processors:
       - type: osc.message.create
         params:
-          address: "/cue/{{.To}}/go"
+          address: "/cue/{{.Payload.To}}/go"
       - type: osc.message.encode
-    output: udp
+      - type: router.output
+        params:
+          module: udp
 `
 
 <Code code={example} title="config.yaml" lang="yaml"/>

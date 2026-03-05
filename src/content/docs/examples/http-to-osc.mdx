@@ -25,9 +25,11 @@ routes:
     processors:
       - type: osc.message.create    # create OSC message
         params:
-          address: "{{.URL.Path}}"  # template the address from the incoming message
+          address: "{{.Payload.URL.Path}}"  # template the address from the incoming message
       - type: osc.message.encode    # turn OSC message into bytes
-    output: udp
+      - type: router.output         # output to the udp module
+        params:
+          module: udp
 `
 
 <Code code={example} title="config.yaml" lang="yaml"/>
