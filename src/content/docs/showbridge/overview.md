@@ -8,7 +8,6 @@ showbridge is a kind of re-imagining of [OSCulator](https://osculator.net/) take
 
 ### Included Modules
 - HTTP
-  - client
   - server
 - UDP
   - client
