@@ -71,6 +71,11 @@ export default defineConfig({
               autogenerate: { directory: 'processors/router' }
             },
             {
+              label: "Filter",
+              collapsed: true,
+              autogenerate: { directory: 'processors/filter' }
+            },
+            {
               label: "Int",
               collapsed: true,
               autogenerate: { directory: 'processors/int' }
