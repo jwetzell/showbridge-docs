@@ -9,6 +9,8 @@ import { Code } from '@astrojs/starlight/components';
 This config starts an SIP server listening on port `5060`. Any incoming call will result in a OSC message being sent to `127.0.0.1:53000` with the address set to [fire a QLab cue](https://qlab.app/docs/v5/scripting/osc-dictionary-v5/#/cue/{cue_number}/go) with the dialed number as the cue number. This was tested with a cheap SIP gateway like [this one](https://www.grandstream.com/products/gateways-and-atas/analog-telephone-adaptors/product/ht802).
 
 export const example = `
+api:
+  port: 8080
 modules:
   - id: sip
     type: sip.call.server
