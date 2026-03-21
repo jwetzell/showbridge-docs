@@ -36,6 +36,11 @@ export default defineConfig({
               autogenerate: { directory: 'modules/time' }
             },
             {
+              label: "Database",
+              collapsed: true,
+              autogenerate: { directory: 'modules/db' }
+            },
+            {
               label: "Network",
               collapsed: true,
               autogenerate: { directory: 'modules/network' }
@@ -60,6 +65,11 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'modules/mqtt' }
             },
+            {
+              label: "Redis",
+              collapsed: true,
+              autogenerate: { directory: 'modules/redis' }
+            },
           ]
         },
         {
@@ -69,6 +79,11 @@ export default defineConfig({
               label: "Router",
               collapsed: true,
               autogenerate: { directory: 'processors/router' }
+            },
+            {
+              label: "Database",
+              collapsed: true,
+              autogenerate: { directory: 'processors/db' }
             },
             {
               label: "Filter",
@@ -111,6 +126,11 @@ export default defineConfig({
               collapsed: true,
               autogenerate: { directory: 'processors/time' }
             },
+            {
+              label: "Key/Value",
+              collapsed: true,
+              autogenerate: { directory: 'processors/kv' }
+            }
           ]
         },
         {
