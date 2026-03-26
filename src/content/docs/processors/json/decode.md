@@ -1,6 +1,5 @@
 ---
 title: Decode JSON
-tableOfContents: false
 sidebar:
     label: Decode
     order: 2

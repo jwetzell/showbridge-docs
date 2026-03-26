@@ -1,6 +1,5 @@
 ---
 title: Database Query
-tableOfContents: false
 sidebar:
     label: Query
     order: 1

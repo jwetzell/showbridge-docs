@@ -1,6 +1,5 @@
 ---
 title:  Create MIDI Message
-tableOfContents: false
 sidebar:
     label: Create
     order: 1

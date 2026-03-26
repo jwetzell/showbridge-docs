@@ -1,6 +1,5 @@
 ---
 title: UDP Multicast
-tableOfContents: false
 sidebar:
     label: Multicast
     order: 3

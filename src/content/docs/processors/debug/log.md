@@ -1,6 +1,5 @@
 ---
 title: Debug Log
-tableOfContents: false
 sidebar:
     label: Log
     order: 1

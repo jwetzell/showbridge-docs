@@ -1,6 +1,5 @@
 ---
 title: Run WASM (Extism) Plugin
-tableOfContents: false
 sidebar:
     label: WASM
     order: 3

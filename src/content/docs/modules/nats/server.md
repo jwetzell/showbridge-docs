@@ -1,6 +1,5 @@
 ---
 title: NATS Server
-tableOfContents: false
 sidebar:
     label: Server
     order: 2

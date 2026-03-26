@@ -1,6 +1,5 @@
 ---
 title: Decode FreeD
-tableOfContents: false
 sidebar:
     label: Decode
     order: 3

@@ -1,6 +1,5 @@
 ---
 title: showbridge
-tableOfContents: false
 sidebar:
   order: 1
 ---

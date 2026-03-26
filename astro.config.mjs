@@ -6,6 +6,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "showbridge",
+      tableOfContents: false,
       favicon: "/favicon.ico",
       social: [
         {

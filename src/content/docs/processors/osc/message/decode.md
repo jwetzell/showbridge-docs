@@ -1,6 +1,5 @@
 ---
 title: Decode OSC Message
-tableOfContents: false
 sidebar:
     label: Decode
     order: 3

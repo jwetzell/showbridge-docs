@@ -1,6 +1,5 @@
 ---
 title: Split String
-tableOfContents: false
 sidebar:
     label: Split
     order: 5

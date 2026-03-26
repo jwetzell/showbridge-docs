@@ -1,6 +1,5 @@
 ---
 title: Scale Int
-tableOfContents: false
 sidebar:
     label: Scale
     order: 3

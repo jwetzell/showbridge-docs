@@ -1,6 +1,5 @@
 ---
 title: Encode OSC Message
-tableOfContents: false
 sidebar:
     label: Encode
     order: 2

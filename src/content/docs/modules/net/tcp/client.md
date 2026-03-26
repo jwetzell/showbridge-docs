@@ -1,6 +1,5 @@
 ---
 title: TCP Client
-tableOfContents: false
 sidebar:
     label: Client
     order: 1

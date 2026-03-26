@@ -1,6 +1,5 @@
 ---
 title: Modules
-tableOfContents: false
 sidebar:
     order: 2
 ---

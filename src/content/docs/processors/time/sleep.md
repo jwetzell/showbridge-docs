@@ -1,6 +1,5 @@
 ---
 title: Sleep
-tableOfContents: false
 sidebar:
     label: Sleep
     order: 1

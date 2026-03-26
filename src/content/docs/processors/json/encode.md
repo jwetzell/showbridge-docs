@@ -1,6 +1,5 @@
 ---
 title: Encode JSON
-tableOfContents: false
 sidebar:
     label: Encode
     order: 1

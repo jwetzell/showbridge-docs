@@ -1,6 +1,5 @@
 ---
 title: Encode MIDI Message
-tableOfContents: false
 sidebar:
     label: Encode
     order: 2

@@ -1,6 +1,5 @@
 ---
 title: Decode String
-tableOfContents: false
 sidebar:
     label: Decode
     order: 1

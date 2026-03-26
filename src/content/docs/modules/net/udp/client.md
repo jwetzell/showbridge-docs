@@ -1,6 +1,5 @@
 ---
 title: UDP Client
-tableOfContents: false
 sidebar:
     label: Client
     order: 1

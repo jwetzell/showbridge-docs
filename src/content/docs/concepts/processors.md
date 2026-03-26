@@ -1,6 +1,5 @@
 ---
 title: Processors
-tableOfContents: false
 sidebar:
     order: 4
 ---

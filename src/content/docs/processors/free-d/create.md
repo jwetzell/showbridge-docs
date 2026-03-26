@@ -1,6 +1,5 @@
 ---
 title: Create FreeD
-tableOfContents: false
 sidebar:
     label: Create
     order: 1

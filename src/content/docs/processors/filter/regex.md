@@ -1,6 +1,5 @@
 ---
 title: Regex Filter
-tableOfContents: false
 sidebar:
     label: Regex
     order: 1

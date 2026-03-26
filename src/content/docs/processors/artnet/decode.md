@@ -1,6 +1,5 @@
 ---
 title: Decode ArtNet Packet
-tableOfContents: false
 sidebar:
     label: Decode
     order: 1

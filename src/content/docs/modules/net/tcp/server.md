@@ -1,6 +1,5 @@
 ---
 title: TCP Server
-tableOfContents: false
 sidebar:
     label: Server
     order: 2

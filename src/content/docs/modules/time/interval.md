@@ -1,6 +1,5 @@
 ---
 title: Interval
-tableOfContents: false
 sidebar:
     order: 2
 ---

@@ -1,6 +1,5 @@
 ---
 title: Output from Router
-tableOfContents: false
 sidebar:
     label: Output
     order: 1

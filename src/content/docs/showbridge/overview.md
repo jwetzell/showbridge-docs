@@ -1,6 +1,5 @@
 ---
 title: Overview
-tableOfContents: false
 sidebar:
     label: Overview
     order: 1

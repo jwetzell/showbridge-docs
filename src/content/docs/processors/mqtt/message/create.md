@@ -1,6 +1,5 @@
 ---
 title: Create MQTT Message
-tableOfContents: false
 sidebar:
     order: 1
 ---
