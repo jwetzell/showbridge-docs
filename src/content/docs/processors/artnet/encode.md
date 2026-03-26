@@ -6,3 +6,9 @@ sidebar:
 ---
 
 - **type**: `artnet.packet.encode`
+This processor will encode an ArtNet packet into an array of bytes. This processor will return an error if the message being processed is not an ArtNet packet.
+
+### Example
+```
+- type: artnet.packet.encode
+```

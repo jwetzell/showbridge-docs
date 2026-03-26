@@ -4,5 +4,10 @@ sidebar:
     label: Decode
     order: 2
 ---
-
+Convert an incoming byte array or raw string into a JSON object. This processor will return an error if the message being processed is not an array of bytes or a raw string, or if the bytes/string cannot be parsed as JSON.
 - **type**: `json.decode`
+
+### Example
+```
+- type: json.decode
+```
