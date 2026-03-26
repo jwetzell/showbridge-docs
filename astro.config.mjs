@@ -8,6 +8,9 @@ export default defineConfig({
       title: "showbridge",
       tableOfContents: false,
       favicon: "/favicon.ico",
+      editLink: {
+        baseUrl: 'https://github.com/jwetzell/showbridge-docs/edit/main/',
+      },
       social: [
         {
           icon: "github",
