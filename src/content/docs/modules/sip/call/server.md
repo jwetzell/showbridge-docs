@@ -1,5 +1,6 @@
 ---
 title: SIP Call Server
+tableOfContents: false
 sidebar:
     label: Server
     order: 1

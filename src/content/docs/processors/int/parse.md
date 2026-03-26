@@ -1,5 +1,6 @@
 ---
 title: Parse Int
+tableOfContents: false
 sidebar:
     label: Parse
     order: 1

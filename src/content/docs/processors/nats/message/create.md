@@ -1,5 +1,6 @@
 ---
 title: Create NATS Message
+tableOfContents: false
 sidebar:
     label: Create
     order: 1

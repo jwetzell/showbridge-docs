@@ -1,5 +1,6 @@
 ---
 title: Create SIP Audio Response
+tableOfContents: false
 sidebar:
     label: Create
     order: 1

@@ -1,5 +1,6 @@
 ---
 title: Create String
+tableOfContents: false
 sidebar:
     label: Create
     order: 3

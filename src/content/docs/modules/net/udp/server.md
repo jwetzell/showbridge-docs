@@ -1,5 +1,6 @@
 ---
 title: UDP Server
+tableOfContents: false
 sidebar:
     label: Server
     order: 2

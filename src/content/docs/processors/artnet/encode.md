@@ -1,5 +1,6 @@
 ---
 title: Encode ArtNet Packet
+tableOfContents: false
 sidebar:
     label: Encode
     order: 2

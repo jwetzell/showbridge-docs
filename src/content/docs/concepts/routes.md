@@ -1,5 +1,6 @@
 ---
 title: Routes
+tableOfContents: false
 sidebar:
     order: 3
 ---

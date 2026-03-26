@@ -1,5 +1,6 @@
 ---
 title: Output from Router
+tableOfContents: false
 sidebar:
     label: Output
     order: 1
@@ -10,7 +11,7 @@ The `router.output` processor takes any payload and outputs to the specified mod
 - **params**:
     - **module**: the id of the [module](/concepts/modules) to output to.
 
-    
+
 ### Example
 Output to the `osc-out` module.
 ```

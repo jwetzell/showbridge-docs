@@ -1,5 +1,6 @@
 ---
 title: Filter On Change
+tableOfContents: false
 sidebar:
     label: On Change
     order: 3

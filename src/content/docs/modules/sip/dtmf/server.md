@@ -1,5 +1,6 @@
 ---
 title: SIP DTMF Server
+tableOfContents: false
 sidebar:
     label: Server
     order: 1

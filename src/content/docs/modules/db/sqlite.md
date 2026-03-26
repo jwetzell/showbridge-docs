@@ -1,5 +1,6 @@
 ---
 title: SQLite
+tableOfContents: false
 sidebar:
     order: 1
 ---

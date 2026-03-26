@@ -1,5 +1,6 @@
 ---
 title: Parse Float
+tableOfContents: false
 sidebar:
     label: Parse
     order: 1

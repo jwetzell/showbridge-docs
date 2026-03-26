@@ -1,5 +1,6 @@
 ---
 title: Encode String
+tableOfContents: false
 sidebar:
     label: Encode
     order: 2

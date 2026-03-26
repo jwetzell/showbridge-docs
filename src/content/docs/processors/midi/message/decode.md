@@ -1,5 +1,6 @@
 ---
 title: Decode MIDI Message
+tableOfContents: false
 sidebar:
     label: Decode
     order: 3

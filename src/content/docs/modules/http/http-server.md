@@ -1,5 +1,6 @@
 ---
 title: HTTP Server
+tableOfContents: false
 sidebar:
     label: Server
     order: 2

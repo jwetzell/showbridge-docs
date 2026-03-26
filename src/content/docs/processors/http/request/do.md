@@ -1,5 +1,6 @@
 ---
 title: Make HTTP Request
+tableOfContents: false
 sidebar:
     label: Make Request
     order: 1

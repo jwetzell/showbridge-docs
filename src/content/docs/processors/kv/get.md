@@ -1,5 +1,6 @@
 ---
 title: Get Key/Value
+tableOfContents: false
 sidebar:
     label: Get
     order: 1

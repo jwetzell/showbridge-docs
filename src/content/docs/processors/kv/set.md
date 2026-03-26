@@ -1,5 +1,6 @@
 ---
 title: Set Key/Value
+tableOfContents: false
 sidebar:
     label: Set
     order: 2

@@ -1,5 +1,6 @@
 ---
 title: Create Random Int
+tableOfContents: false
 sidebar:
     order: 2
 ---

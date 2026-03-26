@@ -1,5 +1,6 @@
 ---
 title: Create HTTP Response
+tableOfContents: false
 sidebar:
     label: Create
     order: 2

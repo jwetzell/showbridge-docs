@@ -1,5 +1,6 @@
 ---
 title: Unpack MIDI Message
+tableOfContents: false
 sidebar:
     label: Unpack
     order: 4

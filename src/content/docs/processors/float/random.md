@@ -1,5 +1,6 @@
 ---
 title: Create Random Float
+tableOfContents: false
 sidebar:
     label: Random
     order: 2

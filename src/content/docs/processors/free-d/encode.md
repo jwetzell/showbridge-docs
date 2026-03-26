@@ -1,5 +1,6 @@
 ---
 title: Encode FreeD
+tableOfContents: false
 sidebar:
     label: Encode
     order: 2

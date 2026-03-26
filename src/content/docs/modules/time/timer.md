@@ -1,5 +1,6 @@
 ---
 title: Timer
+tableOfContents: false
 sidebar:
     order: 1
 ---

@@ -1,7 +1,9 @@
 ---
 title: Overview
+tableOfContents: false
 sidebar:
-  order: 1
+    label: Overview
+    order: 1
 ---
 
 showbridge is a kind of re-imagining of [OSCulator](https://osculator.net/) taken way too far.

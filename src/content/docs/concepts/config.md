@@ -1,5 +1,6 @@
 ---
 title: Config
+tableOfContents: false
 sidebar:
     order: 1
 ---
