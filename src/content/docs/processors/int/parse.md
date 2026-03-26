@@ -1,6 +1,7 @@
 ---
-title: Int Parse
+title: Parse Int
 sidebar:
+    label: Parse
     order: 1
 ---
 The `int.parse` processor takes a string and parses it as an integer with the specified `base` and `bitSize`. This processor will return an error if the message being processed is not a string or if the string cannot be parsed into an integer.

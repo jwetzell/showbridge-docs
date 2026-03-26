@@ -1,6 +1,7 @@
 ---
-title: Float Random
+title: Create Random Float
 sidebar:
+    label: Random
     order: 2
 ---
 The `float.random` processor will set the payload to a random float between the specified `min` and `max` value.

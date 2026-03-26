@@ -1,7 +1,8 @@
 ---
 title: UDP Server
 sidebar:
-    order: 4
+    label: Server
+    order: 2
 ---
 The `net.udp.server` module emits a message for every incoming UDP datagram.
 

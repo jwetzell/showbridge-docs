@@ -1,6 +1,7 @@
 ---
-title: Get
+title: Get Key/Value
 sidebar:
+    label: Get
     order: 1
 ---
 The `kv.get` processor gets the value associated with a key from a compatible module. The output payload is the value if the key is found.

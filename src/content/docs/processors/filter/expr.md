@@ -1,6 +1,7 @@
 ---
 title: Expr Filter
 sidebar:
+    label: Expr
     order: 2
 ---
 The `filter.expr` processor evaluates an [Expr expression](https://expr-lang.org/playground). If the expression evaluates to true then the payload is sent through. This processor will return an error if the expression fails to evaluate.

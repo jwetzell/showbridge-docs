@@ -1,6 +1,7 @@
 ---
-title: OSC Message Encode
+title: Encode OSC Message
 sidebar:
+    label: Encode
     order: 2
 ---
 The `osc.message.encode` processor takes an OSC message and turns it into an array of bytes. This processor will return an error if the OSC message cannot be turned into bytes.

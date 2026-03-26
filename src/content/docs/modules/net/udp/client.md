@@ -1,7 +1,8 @@
 ---
 title: UDP Client
 sidebar:
-    order: 3
+    label: Client
+    order: 1
 ---
 The `net.udp.client` module sends messages to a the configured `host` and `port`. This module does not produce any messages and so using it as an `input` to a [route](/concepts/routes) would be pointless.
 

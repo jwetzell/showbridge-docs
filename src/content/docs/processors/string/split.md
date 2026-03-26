@@ -1,6 +1,7 @@
 ---
-title: String Split
+title: Split String
 sidebar:
+    label: Split
     order: 5
 ---
 The `string.split` processor takes a string and turns it into an array of strings by splitting on `params.separator`. This processor will return an error if the message being processed is not a string.

@@ -1,6 +1,7 @@
 ---
 title: HTTP Server
 sidebar:
+    label: Server
     order: 2
 ---
 The `http.server` module emits a message for every HTTP request that is made to the server.

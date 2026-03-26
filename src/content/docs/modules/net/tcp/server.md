@@ -1,6 +1,7 @@
 ---
 title: TCP Server
 sidebar:
+    label: Server
     order: 2
 ---
 The `net.tcp.server` module emits a message messages based on the data it receives from clients that connect to it. Messages are determined by "framing" techniques as TCP is a stream based protocol.

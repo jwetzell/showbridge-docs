@@ -1,5 +1,5 @@
 ---
-title: Int Random
+title: Create Random Int
 sidebar:
     order: 2
 ---

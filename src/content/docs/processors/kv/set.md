@@ -1,6 +1,7 @@
 ---
-title: Set
+title: Set Key/Value
 sidebar:
+    label: Set
     order: 2
 ---
 The `kv.set` processor sets the value associated with a key from a compatible module. The payload is unchanged so whatever is received by this payload is output unless any errors are encountered.

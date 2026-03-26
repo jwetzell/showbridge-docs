@@ -1,6 +1,7 @@
 ---
-title: Query
+title: Database Query
 sidebar:
+    label: Query
     order: 1
 ---
 The `db.query` processor will issue a query to the specified module and return the result to the next processor in line.

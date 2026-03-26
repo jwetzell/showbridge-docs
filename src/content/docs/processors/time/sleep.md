@@ -1,6 +1,7 @@
 ---
 title: Sleep
 sidebar:
+    label: Sleep
     order: 1
 ---
 The `time.sleep` processor will sleep for the specified `duration` in milliseconds before passing the message to the next processor.

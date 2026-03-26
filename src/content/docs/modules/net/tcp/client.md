@@ -1,6 +1,7 @@
 ---
 title: TCP Client
 sidebar:
+    label: Client
     order: 1
 ---
 The `net.tcp.client` module connects to TCP server and emits messages based on the data it receives from the server that it connects to. Messages are determined by "framing" techniques as TCP is a stream based protocol. The module will attempt to reconnect anytime the connection is closed.

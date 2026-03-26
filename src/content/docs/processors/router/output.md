@@ -1,6 +1,7 @@
 ---
-title: Router Output
+title: Output from Router
 sidebar:
+    label: Output
     order: 1
 ---
 The `router.output` processor takes any payload and outputs to the specified module.

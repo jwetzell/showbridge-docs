@@ -1,6 +1,7 @@
 ---
-title: Float Parse
+title: Parse Float
 sidebar:
+    label: Parse
     order: 1
 ---
 The `float.parse` processor takes a string and parses it as a float with the specified `base` and `bitSize`. This processor will return an error if the message being processed is not a string or if the string cannot be parsed into a float.
