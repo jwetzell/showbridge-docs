@@ -9,7 +9,7 @@ export default defineConfig({
       tableOfContents: false,
       favicon: "/favicon.ico",
       editLink: {
-        baseUrl: 'https://github.com/jwetzell/showbridge-docs/edit/main/',
+        baseUrl: "https://github.com/jwetzell/showbridge-docs/edit/main/",
       },
       social: [
         {
@@ -185,6 +185,26 @@ export default defineConfig({
                   label: "Message",
                   collapsed: true,
                   autogenerate: { directory: "processors/midi/message" },
+                },
+                {
+                  label: "Note On",
+                  collapsed: true,
+                  autogenerate: { directory: "processors/midi/note_on" },
+                },
+                {
+                  label: "Note Off",
+                  collapsed: true,
+                  autogenerate: { directory: "processors/midi/note_off" },
+                },
+                {
+                  label: "Control Change",
+                  collapsed: true,
+                  autogenerate: { directory: "processors/midi/control_change" },
+                },
+                {
+                  label: "Program Change",
+                  collapsed: true,
+                  autogenerate: { directory: "processors/midi/program_change" },
                 },
               ],
             },

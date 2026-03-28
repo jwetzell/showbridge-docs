@@ -1,0 +1,20 @@
+---
+title:  Create MIDI Prgoram Change
+sidebar:
+    label: Create
+    order: 1
+---
+This processor will create a MIDI Program Change message with the specified channel and program number.
+
+- **type**: `midi.program_change.create`
+- **params**:
+    - **channel**: the MIDI channel 
+    - **program**: the program number
+
+### Example
+```yaml
+- type: midi.program_change.create
+  params:
+    channel: "1"
+    program: "10"
+```

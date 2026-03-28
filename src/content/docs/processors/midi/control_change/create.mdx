@@ -1,0 +1,22 @@
+---
+title:  Create MIDI Control Change
+sidebar:
+    label: Create
+    order: 1
+---
+This processor will create a MIDI Control Change message with the specified channel, control number, and control value.
+
+- **type**: `midi.control_change.create`
+- **params**:
+    - **channel**: the MIDI channel 
+    - **control**: the control number
+    - **value**: the control value
+
+### Example
+```yaml
+- type: midi.control_change.create
+  params:
+    channel: "1"
+    control: "64"
+    value: "127"
+``` 

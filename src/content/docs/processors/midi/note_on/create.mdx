@@ -1,0 +1,22 @@
+---
+title:  Create MIDI Note Off
+sidebar:
+    label: Create
+    order: 1
+---
+This processor will create a MIDI Note Off message with the specified channel, note, and velocity.
+
+- **type**: `midi.note_off.create`
+- **params**:
+    - **channel**: the MIDI channel 
+    - **note**: the note number
+    - **velocity**: the velocity
+
+### Example
+```yaml
+- type: midi.note_off.create
+  params:
+    channel: "1"
+    note: "60"
+    velocity: "127"
+```
