@@ -26,7 +26,7 @@ The `serial.client` module connects to a serial device and emits a message messa
 
 ### Example
 Open a serial connection to `/dev/ttyS0` with a buad rate of `115200`, any incoming data will be split on line-feed (`\n`)
-```
+```yaml
 - id: serialClient
   type: serial.client
   params:

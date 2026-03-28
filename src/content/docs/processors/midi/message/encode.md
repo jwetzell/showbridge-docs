@@ -9,6 +9,6 @@ This processor will encode a MIDI message into an array of bytes. This processor
 - **type**: `midi.message.encode`
 
 ### Example
-```
+```yaml
 - type: midi.message.encode
 ```

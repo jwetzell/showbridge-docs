@@ -14,7 +14,7 @@ The `float.random` processor will set the payload to a random float between the 
 
 ### Example
 This would generate a random 64-bit float between 1.1 and 1.5 and set the payload to that value.
-```
+```yaml
 - type: float.random
   params:
     bitSize: 64

@@ -14,7 +14,7 @@ This module starts a [SIP](https://en.wikipedia.org/wiki/Session_Initiation_Prot
 
 ### Example
 Start a UDP SIP server listening on port 5060
-```
+```yaml
 - id: sipCallServer
   type: sip.call.server
   params:

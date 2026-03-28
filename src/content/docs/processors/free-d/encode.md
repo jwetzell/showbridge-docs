@@ -10,6 +10,6 @@ This processor will encode a FreeD message into an array of bytes. This processo
 - **type**: `free.d.encode`
 
 ### Example
-```
+```yaml
 - type: free.d.encode
 ```

@@ -20,7 +20,7 @@ The `net.tcp.server` module emits a message messages based on the data it receiv
 
 ### Example
 Start a TCP server listening on port 8888, incoming data will be split on line-feed (`\n`)
-```
+```yaml
 - id: tcpServer
   type: net.tcp.server
   params:

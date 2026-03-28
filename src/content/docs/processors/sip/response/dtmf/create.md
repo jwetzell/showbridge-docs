@@ -14,7 +14,7 @@ This processor will create a SIP DTMF response from the provided parameters. If 
 
 ### Example
 This example will create a SIP response that will wait 1 second then play the DTMF digits "1234" then wait another second before completing the response.
-```
+```yaml
 - type: sip.response.dtmf.create
   params:
     preWait: 1000

@@ -12,7 +12,7 @@ The `filter.expr` processor evaluates an [Expr expression](https://expr-lang.org
 
 ### Example
 Match a payload great than or equal to 0
-```
+```yaml
 - type: filter.expr
   params:
     pattern: "Payload >= 0"

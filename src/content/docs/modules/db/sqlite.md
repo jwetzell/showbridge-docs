@@ -13,7 +13,7 @@ The `db.sqlite` module can open/create SQLite databases
 
 ### Example snippet
 Opens an in-memory SQLite database
-```
+```yaml
 - id: db
   type: db.sqlite
     params:

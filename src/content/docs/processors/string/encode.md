@@ -9,6 +9,6 @@ The `string.encode` processor takes a string and turns it into an array of bytes
 - **type**: `string.encode`
 
 ### Example
-```
+```yaml
 - type: string.encode
 ```

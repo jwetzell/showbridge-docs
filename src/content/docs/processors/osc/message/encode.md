@@ -9,6 +9,6 @@ The `osc.message.encode` processor takes an OSC message and turns it into an arr
 - **type**: `osc.message.encode`
 
 ### Example
-```
+```yaml
 - type: osc.message.encode
 ```

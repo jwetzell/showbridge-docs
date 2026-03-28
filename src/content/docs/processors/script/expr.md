@@ -11,7 +11,8 @@ The processor will execute the provided Expr expression and return the result as
 
 ### Example
 This example will add 1 to the wrapped payload.
-```
+
+```yaml
 - type: script.expr
   params:
     expression: "Payload + 1"

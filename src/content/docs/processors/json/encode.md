@@ -11,6 +11,6 @@ This processor will encode an incoming object into a JSON byte array. This proce
 
 
 ### Example
-```
+```yaml
 - type: json.encode
 ```

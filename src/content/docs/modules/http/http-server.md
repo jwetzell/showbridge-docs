@@ -12,7 +12,7 @@ The `http.server` module emits a message for every HTTP request that is made to 
 
 ### Example
 Start an HTTP server listening on port 3000
-```
+```yaml
 - id: httpServer
   type: http.server
   params:

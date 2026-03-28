@@ -14,7 +14,7 @@ This processor will create a SIP response message with an audio file as the payl
 
 ### Example
 This example will create a SIP response that will wait 1 second then play `response.wav` then wait another second before completing the response.
-```
+```yaml
 - type: sip.response.audio.create
   params:
     preWait: 1000

@@ -13,7 +13,7 @@ The `int.parse` processor takes a string and parses it as an integer with the sp
 
 ### Example
 This would parse the string payload as a 32 bit, base 10 integer and set the payload to that value.
-```
+```yaml
 - type: int.parse
   params:
     bitSize: 32

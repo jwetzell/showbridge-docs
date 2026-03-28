@@ -8,6 +8,6 @@ Convert an incoming byte array or raw string into a JSON object. This processor 
 - **type**: `json.decode`
 
 ### Example
-```
+```yaml
 - type: json.decode
 ```

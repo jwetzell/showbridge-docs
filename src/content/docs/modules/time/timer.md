@@ -11,7 +11,7 @@ The `time.timer` module emits only one message after a specified duration. Sendi
 
 ### Example snippet
 Emits a message 5 seconds after the module is initialized
-```
+```yaml
 - id: 5secs
   type: time.timer
     params:

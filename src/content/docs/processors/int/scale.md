@@ -16,7 +16,7 @@ This processor will scale an integer value from one range to another. This proce
 
 ### Example
 Scale an integer value from the range 0-255 to the range 0-100
-```
+```yaml
 - type: int.scale
   params:
     inMin: 0

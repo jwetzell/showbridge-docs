@@ -13,7 +13,7 @@ This processor will create an MQTT message from the provided parameters. This pr
     - **payload**: the payload of the message. This can be a string or a byte array.
 
 ### Example
-```
+```yaml
 - type: mqtt.message.create
   params:
     topic: "test/topic"

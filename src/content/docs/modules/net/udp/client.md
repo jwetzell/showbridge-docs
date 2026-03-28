@@ -13,7 +13,7 @@ The `net.udp.client` module sends messages to a the configured `host` and `port`
 
 ### Example
 setup up a UDP client that will send UDP packets to `127.0.0.1` on port 8888
-```
+```yaml
 - id: udpClient
   type: net.udp.client
   params:

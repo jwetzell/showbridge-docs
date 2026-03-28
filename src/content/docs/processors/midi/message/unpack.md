@@ -9,6 +9,6 @@ This processor will unpack a MIDI message into its individual components. This p
 - **type**: `midi.message.unpack`
 
 ### Example
-```
+```yaml
 - type: midi.message.unpack
 ```

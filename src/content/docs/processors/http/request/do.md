@@ -15,7 +15,7 @@ This process will make an HTTP request to the specified URL using the specified 
 
 ### Example
 Make a GET request to `https://example.com`
-```
+```yaml
 - type: http.request.do
   params:
     method: GET

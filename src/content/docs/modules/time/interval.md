@@ -11,7 +11,7 @@ The `time.interval` module emits a message at a specified duration. Sending any 
 
 ### Example snippet
 Emits a message every 3 seconds
-```
+```yaml
 - id: every3Secs
   type: time.interval
     params:

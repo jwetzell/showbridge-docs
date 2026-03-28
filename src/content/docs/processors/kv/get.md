@@ -13,7 +13,7 @@ The `kv.get` processor gets the value associated with a key from a compatible mo
 
 ### Example
 This will attempt to get the value for the `counter` key from the module with an id of `redis`
-```
+```yaml
 - type: kv.get
   params:
     module: redis

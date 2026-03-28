@@ -14,7 +14,7 @@ This processor will load and execute a WASM plugin using the [Extism](https://ex
 
 ### Example
 This example will load the plugin at `./test.wasm` and execute the `test` function
-```
+```yaml
 - type: script.wasm
   params:
     path: "./test.wasm"

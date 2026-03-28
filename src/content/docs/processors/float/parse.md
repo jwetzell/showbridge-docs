@@ -12,7 +12,7 @@ The `float.parse` processor takes a string and parses it as a float with the spe
 
 ### Example
 This would parse the string payload as a 32 bit float and set the payload to that value.
-```
+```yaml
 - type: float.parse
   params:
     bitSize: 32

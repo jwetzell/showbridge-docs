@@ -12,7 +12,7 @@ This module connects to a [NATS](https://nats.io/) server and subscribes to a su
 
 ### Example
 Connect to a local NATS server and subscribe to the `events` subject 
-```
+```yaml
 - id: natsClient
   type: nats.client
   params:

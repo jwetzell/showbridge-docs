@@ -12,7 +12,7 @@ The `db.query` processor will issue a query to the specified module and return t
     - **query**: the query to execute. 
 ### Example
 Issue a `SELECT` statement to a module with id `sqlite`.
-```
+```yaml
 - type: db.query
   params:
     module: sqlite

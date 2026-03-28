@@ -12,7 +12,7 @@ The `filter.regex` processor matches incoming string payload against a regular e
 
 ### Example
 Match strings starting with `hello`
-```
+```yaml
 - type: filter.regex
   params:
     pattern: "^hello.*"

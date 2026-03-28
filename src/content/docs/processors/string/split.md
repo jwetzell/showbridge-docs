@@ -12,7 +12,8 @@ The `string.split` processor takes a string and turns it into an array of string
 
 ### Example
 Split incoming string on `,` i.e `"one,two,three"` -> `["one","two","three"]`
-```
+
+```yaml
 - type: string.split
   params:
     separator: ","

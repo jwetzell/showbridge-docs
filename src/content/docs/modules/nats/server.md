@@ -12,7 +12,7 @@ This module starts a NATS server that listens for incoming connections.
 
 ### Example
 Start a local NATS server listening on port 5555
-```
+```yaml
 - id: httpServer
   type: http.server
   params:

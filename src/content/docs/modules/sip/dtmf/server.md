@@ -16,7 +16,7 @@ This module starts a [SIP](https://en.wikipedia.org/wiki/Session_Initiation_Prot
 
 ### Example
 Start a UDP SIP server listening on port 5060 that will emit events whenever the user presses the `#` key on their phone during a call
-```
+```yaml
 - id: sipDTMFServer
   type: sip.dtmf.server
   params:

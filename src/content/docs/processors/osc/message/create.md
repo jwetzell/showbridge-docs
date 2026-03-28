@@ -15,7 +15,7 @@ This processor will create an OSC message from the provided parameters. This pro
 ### Example
 Create an OSC message with the address `/test/message` and two integer arguments from the payload of the message being processed.
 
-```
+```yaml
 - type: osc.message.create
   params:
     address: "/test/message"

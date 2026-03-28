@@ -9,6 +9,6 @@ This processor will decode incoming bytes into a MIDI message. This processor wi
 - **type**: `midi.message.decode`
 
 ### Example
-```
+```yaml
 - type: midi.message.decode
 ```

@@ -21,7 +21,7 @@ This processor will create a new FreeD message with the specified parameters.
 
 
 ### Example
-```
+```yaml
 - type: free.d.create
   params:
     id: "1"

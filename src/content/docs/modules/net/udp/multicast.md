@@ -12,7 +12,7 @@ sidebar:
 
 ### Example
 Listen to the mDNS multicast address on port 5353
-```
+```yaml
 - id: mdnsListener
   type: net.udp.multicast
   params:

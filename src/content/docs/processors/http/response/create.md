@@ -14,7 +14,7 @@ This processor will create a new HTTP response with the specified status code an
 
 ### Example
 This would create an HTTP response with a status code of `200` and a body of `OK`
-```
+```yaml
 - type: http.response.create
   params:
     status: 200

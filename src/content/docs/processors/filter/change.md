@@ -11,6 +11,6 @@ This processor will only pass messages through if the value of the message has c
 
 
 ### Example
-```
+```yaml
 - type: filter.change
 ```

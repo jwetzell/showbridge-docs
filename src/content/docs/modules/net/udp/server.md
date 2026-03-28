@@ -14,7 +14,7 @@ The `net.udp.server` module emits a message for every incoming UDP datagram.
 
 ### Example
 Start a UDP server listening on port 8888 and only on `127.0.0.1`
-```
+```yaml
 - id: udpServer
   type: net.udp.server
   params:

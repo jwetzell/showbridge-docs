@@ -9,6 +9,6 @@ The `string.decode` processor takes a array of bytes and turn it into string. Th
 - **type**: `string.decode`
 
 ### Example
-```
+```yaml
 - type: string.decode
 ```

@@ -14,7 +14,7 @@ The `kv.set` processor sets the value associated with a key from a compatible mo
 
 ### Example
 This will attempt to set the key `hello` to `world` using the module with an id of `redis`
-```
+```yaml
 - type: kv.set
   params:
     module: redis

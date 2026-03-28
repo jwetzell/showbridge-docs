@@ -12,7 +12,7 @@ The `string.create` processor creates a string based on the provided template. T
 
 ### Example
 This would create a string using the `Address` property of the incoming message like and OSC message
-```
+```yaml
 - type: string.create
   params: 
     template: "{{.Address}}

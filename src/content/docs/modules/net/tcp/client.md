@@ -20,7 +20,7 @@ The `net.tcp.client` module connects to TCP server and emits messages based on t
 
 ### Example
 Open a TCP connection to `127.0.0.1` port 8888, any incoming data will be split on line-feed (`\n`)
-```
+```yaml
 - id: tcpClient
   type: net.tcp.client
   params:

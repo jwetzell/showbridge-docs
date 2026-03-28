@@ -12,7 +12,7 @@ The `int.random` processor will set the payload to a random integer between the 
 
 ### Example
 This would generate a random integer between -127 and 127 and set the payload to that value.
-```
+```yaml
 - type: int.random
   params:
     min: -127

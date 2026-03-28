@@ -12,7 +12,7 @@ This processor will create a NATS message from the provided parameters. This pro
     - **payload**: the payload of the message.
 
 ### Example
-```
+```yaml
 - type: nats.message.create
   params:
     subject: "events"

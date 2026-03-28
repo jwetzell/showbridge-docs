@@ -10,6 +10,6 @@ This processor will decode incoming bytes into a FreeD message. This processor w
 - **type**: `free.d.decode`
 
 ### Example
-```
+```yaml
 - type: free.d.decode
 ```

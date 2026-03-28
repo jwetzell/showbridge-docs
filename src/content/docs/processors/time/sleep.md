@@ -12,7 +12,7 @@ The `time.sleep` processor will sleep for the specified `duration` in millisecon
 
 ### Example
 This would sleep for 5 seconds before passing the message to the next processor.
-```
+```yaml
 - type: time.sleep
   params:
     duration: 5000

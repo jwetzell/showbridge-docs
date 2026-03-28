@@ -13,7 +13,8 @@ The `router.output` processor takes any payload and outputs to the specified mod
 
 ### Example
 Output to the `osc-out` module.
-```
+
+```yaml
 - type: router.output
   params:
     module: osc-out

@@ -9,6 +9,6 @@ The `osc.message.decode` processor takes a array of bytes and turn it into OSC m
 - **type**: `osc.message.decode`
 
 ### Example
-```
+```yaml
 - type: osc.message.encode
 ```
