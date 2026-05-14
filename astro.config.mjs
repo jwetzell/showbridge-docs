@@ -111,6 +111,11 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              label: "WebSocket",
+              collapsed: true,
+              autogenerate: { directory: "modules/websocket" },
+            },
           ],
         },
         {

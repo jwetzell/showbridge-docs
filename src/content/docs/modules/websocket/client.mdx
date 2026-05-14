@@ -1,0 +1,21 @@
+---
+title: WebSocket Client
+sidebar:
+    label: Client
+    order: 1
+---
+
+The `websocket.client` module opens a websocket connection to the specified URL. This module supports both text and binary websocket messages.
+
+- **type**: `websocket.client`
+- **params**:
+    - **url**: the full url to connect to (`wss://echo.websocket.org`)
+
+### Example
+Connect to the example WS server at `echo.websocket.org`.
+```yaml
+- id: websocket
+  type: websocket.client
+  params:
+    url: "wss://echo.websocket.org"
+```
