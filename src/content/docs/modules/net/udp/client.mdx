@@ -1,18 +1,21 @@
 ---
 title: UDP Client
 sidebar:
-    label: Client
-    order: 1
+  label: Client
+  order: 1
 ---
+
 The `net.udp.client` module sends messages to a the configured `host` and `port`. This module does not produce any messages and so using it as an `input` to a [route](/concepts/routes) would be pointless.
 
 - **type**: `net.udp.client`
 - **params**:
-    - **host**: IP or FQDN to send message to
-    - **port**: UDP port to send messages to
+  - **host**: IP or FQDN to send message to
+  - **port**: UDP port to send messages to
 
 ### Example
+
 setup up a UDP client that will send UDP packets to `127.0.0.1` on port 8888
+
 ```yaml
 - id: udpClient
   type: net.udp.client

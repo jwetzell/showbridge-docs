@@ -1,23 +1,27 @@
 ---
 title: MIDI Output
 sidebar:
-    label: Output
-    order: 2
+  label: Output
+  order: 2
 ---
-import { Aside } from '@astrojs/starlight/components';
+
+import { Aside } from "@astrojs/starlight/components";
 
 <Aside type="caution">
-This module is not currently included in the docker builds of [showbridge](https://hub.docker.com/r/jwetzell/showbridge)
+  This module is not currently included in the docker builds of
+  [showbridge](https://hub.docker.com/r/jwetzell/showbridge)
 </Aside>
 
 The `midi.output` module connects to a midi device (or virtual device) and allows sending MIDI messages out to that device. This module does not produce any messages and so using it as an `input` to a [route](/concepts/routes) would be pointless.
 
 - **type**: `midi.output`
 - **params**:
-    - **port**: name of the MIDI port to connect to
+  - **port**: name of the MIDI port to connect to
 
 ### Example
+
 Open a MIDI connection to `Logic Pro Virtual In`.
+
 ```yaml
 - id: midiOutput
   type: midi.output

@@ -1,19 +1,21 @@
 ---
 title: Redis Client
 sidebar:
-    label: Client
-    order: 1
+  label: Client
+  order: 1
 ---
 
 The `redis.client` module connects to a Redis server. This module does not produce any messages and so using it as an `input` to a [route](/concepts/routes) would be pointless.
 
 - **type**: `redis.client`
 - **params**:
-    - **host**: the Redis server host
-    - **port**: the Redis server port
+  - **host**: the Redis server host
+  - **port**: the Redis server port
 
 ### Example
+
 Connect to a Redis server running on `localhost` at port `6379`.
+
 ```yaml
 - id: redisClient
   type: redis.client

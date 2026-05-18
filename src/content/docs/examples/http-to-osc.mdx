@@ -1,13 +1,12 @@
 ---
 title: HTTP > OSC
 sidebar:
-    order: 1
+  order: 1
 ---
 
-import { Code } from '@astrojs/starlight/components';
+import { Code } from "@astrojs/starlight/components";
 
 This config starts an HTTP server listening on port `3000`. Any HTTP request coming into that server will result in a OSC message being sent to `127.0.0.1:8000` with the address set to the path from the incoming HTTP message.
-
 
 export const example = `
 api:
@@ -33,6 +32,6 @@ routes:
       - type: router.output         # output to the udp module
         params:
           module: udp
-`
+`;
 
-<Code code={example} title="config.yaml" lang="yaml"/>
+<Code code={example} title="config.yaml" lang="yaml" />

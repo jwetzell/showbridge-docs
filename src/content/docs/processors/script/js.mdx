@@ -1,8 +1,8 @@
 ---
 title: Execute JavaScript
 sidebar:
-    label: JavaScript
-    order: 1
+  label: JavaScript
+  order: 1
 ---
 
 The `script.js` processor takes in any payload type and executes a JavaScript function that is able to process the payload. The end value of `payload` will be returned as the output of the processor.
@@ -13,13 +13,15 @@ This run your JavaScript program in a [sandboxed environment](https://gitlab.com
 
 - **type**: `script.js`
 - **params**:
-    - **program**: The JavaScript program to run. The payload is available as a global variable called `payload`.
+  - **program**: The JavaScript program to run. The payload is available as a global variable called `payload`.
+
 ### Example
+
 Replace all occurrences of `|` with `,` in the payload
 
 ```yaml
 - type: script.js
   params:
     program: |
-        payload = payload.replaceAll('|',',');
+      payload = payload.replaceAll('|',',');
 ```

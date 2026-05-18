@@ -1,16 +1,19 @@
 ---
 title: Interval
 sidebar:
-    order: 2
+  order: 2
 ---
+
 The `time.interval` module emits a message at a specified duration. Sending any message to this module will reset the interval timer.
 
 - **type**: `time.interval`
 - **params**:
-    - **duration**: time in milliseconds between messsages
+  - **duration**: time in milliseconds between messsages
 
 ### Example snippet
+
 Emits a message every 3 seconds
+
 ```yaml
 - id: every3Secs
   type: time.interval
