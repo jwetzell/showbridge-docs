@@ -5,7 +5,9 @@ sidebar:
   order: 1
 ---
 
-This processor will publish the incoming payload to a Pub/Sub capable module. This processor will return an error if any of the required parameters are missing or if the parameters are of the wrong type.
+This processor will publish the incoming payload to a module that implements the `PubSubModule` interface.
+This processor will return an error if any of the required parameters are missing or if the parameters are of the wrong type.
+The payload is unchanged so whatever is received by this payload is output unless any errors are encountered.
 
 - **type**: `pubsub.publish`
 - **params**:

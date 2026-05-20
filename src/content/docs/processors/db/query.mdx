@@ -6,6 +6,8 @@ sidebar:
 ---
 
 The `db.query` processor will issue a query to the specified module and return the result to the next processor in line.
+The module must implement the `DatabaseModule` interface for this processor to work.
+This processor will return an error if any of the required parameters are missing/invalid or if the module does not implement the `DatabaseModule` interface.
 
 - **type**: `db.query`
 - **params**:
