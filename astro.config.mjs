@@ -237,6 +237,11 @@ export default defineConfig({
               ],
             },
             {
+              label: "Module",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "processors/module" } }],
+            },
+            {
               label: "MQTT",
               collapsed: true,
               items: [
@@ -274,11 +279,6 @@ export default defineConfig({
                   ],
                 },
               ],
-            },
-            {
-              label: "Router",
-              collapsed: true,
-              items: [{ autogenerate: { directory: "processors/router" } }],
             },
             {
               label: "Script",

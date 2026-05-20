@@ -5,7 +5,7 @@ sidebar:
   order: 2
 ---
 
-This processor will create a new HTTP response with the specified status code and body template. The created response will be passed through to the next processor in the chain. If the response is subsequently sent to an HTTP server module using the [router.output](../router/output.md) processor, the status code and body template set by this processor will be used for the response sent to the client. This processor will return an error if there is an issue executing the body template.
+This processor will create a new HTTP response with the specified status code and body template. The created response will be passed through to the next processor in the chain. If the response is subsequently sent to an HTTP server module using the [module.output](../module/output.md) processor, the status code and body template set by this processor will be used for the response sent to the client. This processor will return an error if there is an issue executing the body template.
 
 - **type**: `http.response.create`
 - **params**:

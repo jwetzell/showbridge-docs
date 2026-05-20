@@ -1,0 +1,22 @@
+---
+title: Output to module
+sidebar:
+  label: Output
+  order: 1
+---
+
+The `module.output` processor takes any payload and outputs to the specified module.
+
+- **type**: `module.output`
+- **params**:
+  - **module**: the id of the [module](/concepts/modules) to output to.
+
+### Example
+
+Output whatever payload comes through this processor to the `osc-out` module.
+
+```yaml
+- type: module.output
+  params:
+    module: osc-out
+```

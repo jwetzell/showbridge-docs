@@ -29,7 +29,7 @@ routes:
         params:
           address: "/cue/{{.Payload.To}}/go"
       - type: osc.message.encode
-      - type: router.output
+      - type: module.output
         params:
           module: udp
 `;

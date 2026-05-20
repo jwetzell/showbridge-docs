@@ -29,7 +29,7 @@ routes:
         params:
           address: "{{.Payload.URL.Path}}"  # template the address from the incoming message
       - type: osc.message.encode    # turn OSC message into bytes
-      - type: router.output         # output to the udp module
+      - type: module.output         # output to the udp module
         params:
           module: udp
 `;
