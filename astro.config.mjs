@@ -242,32 +242,6 @@ export default defineConfig({
               items: [{ autogenerate: { directory: "processors/module" } }],
             },
             {
-              label: "MQTT",
-              collapsed: true,
-              items: [
-                {
-                  label: "Message",
-                  collapsed: true,
-                  items: [
-                    { autogenerate: { directory: "processors/mqtt/message" } },
-                  ],
-                },
-              ],
-            },
-            {
-              label: "NATS",
-              collapsed: true,
-              items: [
-                {
-                  label: "Message",
-                  collapsed: true,
-                  items: [
-                    { autogenerate: { directory: "processors/nats/message" } },
-                  ],
-                },
-              ],
-            },
-            {
               label: "OSC",
               collapsed: true,
               items: [
@@ -279,6 +253,11 @@ export default defineConfig({
                   ],
                 },
               ],
+            },
+            {
+              label: "Pub/Sub",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "processors/pubsub" } }],
             },
             {
               label: "Script",

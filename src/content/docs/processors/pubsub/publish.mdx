@@ -1,0 +1,22 @@
+---
+title: Publish to Pub/Sub
+sidebar:
+  label: Publish
+  order: 1
+---
+
+This processor will publish the incoming payload to a Pub/Sub capable module. This processor will return an error if any of the required parameters are missing or if the parameters are of the wrong type.
+
+- **type**: `pubsub.publish`
+- **params**:
+  - **module**: the module to publish with.
+  - **topic**: the subject to publish to.
+
+### Example
+
+```yaml
+- type: pubsub.publish
+  params:
+    module: mqtt-out
+    topic: "test"
+```
