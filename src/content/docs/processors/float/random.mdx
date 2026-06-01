@@ -4,14 +4,11 @@ sidebar:
   label: Random
   order: 2
 ---
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
 The `float.random` processor will set the payload to a random float between the specified `min` and `max` value.
 
-- **type**: `float.random`
-- **params**:
-  - **bitSize**: (optional) the bit size of the float to generate, defaults to 32
-  - **min**: the minimum value for the random float (inclusive).
-  - **max**: the maximum value for the random float (exclusive).
+<SchemaInfo type="processor" id="float.random"/>
 
 ### Example
 

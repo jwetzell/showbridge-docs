@@ -6,6 +6,7 @@ sidebar:
 ---
 
 import { Aside } from "@astrojs/starlight/components";
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
 <Aside type="caution">
   This module is not currently included in the docker builds of
@@ -14,9 +15,7 @@ import { Aside } from "@astrojs/starlight/components";
 
 The `midi.input` module connects to a midi device (or virtual device) and emits MIDI messages that come in on that port. This module does not support output.
 
-- **type**: `midi.input`
-- **params**:
-  - **port**: name of the MIDI port to connect to
+<SchemaInfo type="module" id="midi.input"></SchemaInfo>
 
 ### Example
 

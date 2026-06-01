@@ -4,14 +4,11 @@ sidebar:
   label: Server
   order: 2
 ---
+import SchemaInfo from '../../../../../components/SchemaInfo.astro';
 
 The `net.udp.server` module emits a message for every incoming UDP datagram.
 
-- **type**: `net.udp.server`
-- **params**:
-  - **ip**: (optional) IP address to bind the UDP server to, if left out it will listen on all interfaces
-  - **port**: UDP port to listen on
-  - **bufferSize**: (optional) Size of the read buffer for incoming UDP datagrams, defaults to `2048`
+<SchemaInfo type="module" id="net.udp.server"></SchemaInfo>
 
 ### Example
 

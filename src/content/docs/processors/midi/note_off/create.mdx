@@ -1,22 +1,19 @@
 ---
-title: Create MIDI Note On
+title: Create MIDI Note Off
 sidebar:
   label: Create
   order: 1
 ---
+import SchemaInfo from '../../../../../components/SchemaInfo.astro';
 
-This processor will create a MIDI Note On message with the specified channel, note, and velocity.
+This processor will create a MIDI Note Off message with the specified channel, note, and velocity.
 
-- **type**: `midi.note_on.create`
-- **params**:
-  - **channel**: the MIDI channel
-  - **note**: the note number
-  - **velocity**: the velocity
+<SchemaInfo type="processor" id="midi.note_off.create"/>
 
 ### Example
 
 ```yaml
-- type: midi.note_on.create
+- type: midi.note_off.create
   params:
     channel: "1"
     note: "60"

@@ -4,13 +4,11 @@ sidebar:
   label: Client
   order: 1
 ---
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
 This module connects to a [NATS](https://nats.io/) server and subscribes to a subject.
 
-- **type**: `nats.client`
-- **params**:
-  - **url**: the URL of the NATS server to connect to (e.g. `nats://localhost:4222`)
-  - **subject**: the subject to subscribe to
+<SchemaInfo type="module" id="nats.client"></SchemaInfo>
 
 This module implements the `PubSubModule` interface.
 

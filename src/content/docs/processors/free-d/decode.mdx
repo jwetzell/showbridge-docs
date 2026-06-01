@@ -4,13 +4,14 @@ sidebar:
   label: Decode
   order: 3
 ---
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
 This processor will decode incoming bytes into a FreeD message. This processor will return an error if the message being processed is not an array of bytes.
 
-- **type**: `free.d.decode`
+<SchemaInfo type="processor" id="freed.decode"/>
 
 ### Example
 
 ```yaml
-- type: free.d.decode
+- type: freed.decode
 ```

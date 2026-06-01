@@ -4,14 +4,11 @@ sidebar:
   label: Create
   order: 1
 ---
+import SchemaInfo from '../../../../../components/SchemaInfo.astro';
 
 This processor will create a MIDI Control Change message with the specified channel, control number, and control value.
 
-- **type**: `midi.control_change.create`
-- **params**:
-  - **channel**: the MIDI channel
-  - **control**: the control number
-  - **value**: the control value
+<SchemaInfo type="processor" id="midi.control_change.create"/>
 
 ### Example
 
