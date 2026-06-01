@@ -3,24 +3,22 @@ title: SQLite
 sidebar:
   order: 1
 ---
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
 The `db.sqlite` module can open/create SQLite databases
 
-- **type**: `db.sqlite`
-- **params**:
-  - **dsn**: the data source name, this can be a file path or the special `:memory:` name for an in-memory DB
+<SchemaInfo type="module" id="db.sqlite"></SchemaInfo>
 
 This module implements the `DatabaseModule` interface.
 
-## Cap
 
-### Example snippet
+### Example
 
 Opens an in-memory SQLite database
 
 ```yaml
-- id: db
+- id: myDatabase
   type: db.sqlite
-    params:
-      dsn: ":memory:"
+  params:
+    dsn: ":memory:"
 ```

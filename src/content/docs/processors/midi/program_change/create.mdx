@@ -4,13 +4,11 @@ sidebar:
   label: Create
   order: 1
 ---
+import SchemaInfo from '../../../../../components/SchemaInfo.astro';
 
 This processor will create a MIDI Program Change message with the specified channel and program number.
 
-- **type**: `midi.program_change.create`
-- **params**:
-  - **channel**: the MIDI channel
-  - **program**: the program number
+<SchemaInfo type="processor" id="midi.program_change.create"/>
 
 ### Example
 

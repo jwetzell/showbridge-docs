@@ -4,9 +4,12 @@ sidebar:
   label: Encode
   order: 2
 ---
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
-- **type**: `artnet.packet.encode`
-  This processor will encode an ArtNet packet into an array of bytes. This processor will return an error if the message being processed is not an ArtNet packet.
+This processor will encode an ArtNet packet into an array of bytes. This processor will return an error if the message being processed is not an ArtNet packet.
+
+<SchemaInfo type="processor" id="artnet.packet.encode"/>
+
 
 ### Example
 

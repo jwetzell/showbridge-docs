@@ -4,15 +4,11 @@ sidebar:
   label: Scale
   order: 3
 ---
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
 This processor will scale an integer value from one range to another. This processor will return an error if the message being processed is not an integer or if the parameters are not valid (e.g. if `inMin` is greater than or equal to `inMax`, etc.).
 
-- **type**: `int.scale`
-- **params**:
-  - **inMin**: the minimum value of the input range
-  - **inMax**: the maximum value of the input range
-  - **outMin**: the minimum value of the output range
-  - **outMax**: the maximum value of the output range
+<SchemaInfo type="processor" id="int.scale"/>
 
 ### Example
 

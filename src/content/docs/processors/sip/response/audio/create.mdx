@@ -4,14 +4,11 @@ sidebar:
   label: Create
   order: 1
 ---
+import SchemaInfo from '../../../../../../components/SchemaInfo.astro';
 
 This processor will create a SIP response message with an audio file as the payload. If this message is output to a SIP module using the [module.output](/processors/module/output) processor, then the SIP module will send the response to the caller and play the audio file included in the response.
 
-- **type**: `sip.response.audio.create`
-- **params**:
-  - **preWait**: the amount of time in milliseconds to wait before sending the response
-  - **audioFile**: the path to the audio file to include in the response
-  - **postWait**: the amount of time in milliseconds to wait after sending the response
+<SchemaInfo type="processor" id="sip.response.audio.create"/>
 
 ### Example
 

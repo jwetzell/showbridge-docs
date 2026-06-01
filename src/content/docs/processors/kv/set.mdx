@@ -4,23 +4,19 @@ sidebar:
   label: Set
   order: 2
 ---
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
-The `kv.set` processor sets the value associated with a key from a module that implements the `KeyValueModule` interface. The payload is unchanged so whatever is received by this payload is output unless any errors are encountered.
+The `kv.set` processor sets the value of the configured key to the incoming payload using a module that implements the `KeyValueModule` interface. The payload is unchanged so whatever is received by this processor is output unless any errors are encountered.
 
-- **type**: `kv.set`
-- **params**:
-  - **module**: id of the module
-  - **key**: the key to look up
-  - **value**: the value to set
+<SchemaInfo type="processor" id="kv.set"/>
 
 ### Example
 
-This will attempt to set the key `hello` to `world` using the module with an id of `redis`
+This will attempt to set the key `hello` using the module with an id of `redis`
 
 ```yaml
 - type: kv.set
   params:
     module: redis
     key: hello
-    value: world
 ```

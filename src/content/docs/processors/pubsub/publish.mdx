@@ -4,15 +4,13 @@ sidebar:
   label: Publish
   order: 1
 ---
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
 This processor will publish the incoming payload to a module that implements the `PubSubModule` interface.
 This processor will return an error if any of the required parameters are missing or if the parameters are of the wrong type.
 The payload is unchanged so whatever is received by this payload is output unless any errors are encountered.
 
-- **type**: `pubsub.publish`
-- **params**:
-  - **module**: the module to publish with.
-  - **topic**: the subject to publish to.
+<SchemaInfo type="processor" id="pubsub.publish"/>
 
 ### Example
 

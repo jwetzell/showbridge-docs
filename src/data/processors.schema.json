@@ -1,0 +1,1035 @@
+{
+  "type": "array",
+  "items": {
+    "oneOf": [
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "digits": {
+                "type": "string",
+                "title": "Digits",
+                "description": "DTMF digits to send"
+              },
+              "postWait": {
+                "type": "integer",
+                "title": "Post Wait (ms)",
+                "description": "number of milliseconds to wait after sending the DTMF tones"
+              },
+              "preWait": {
+                "type": "integer",
+                "title": "Pre Wait (ms)",
+                "description": "number of milliseconds to wait before sending the DTMF tones"
+              }
+            },
+            "required": ["preWait", "postWait", "digits"],
+            "additionalProperties": false
+          },
+          "type": { "const": "sip.response.dtmf.create" }
+        },
+        "$id": "sip.response.dtmf.create",
+        "title": "Create SIP DTMF Response",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "json.encode" } },
+        "$id": "json.encode",
+        "title": "Encode JSON",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "channel": {
+                "type": "string",
+                "title": "Channel",
+                "description": "channel number for the program change message"
+              },
+              "program": {
+                "type": "string",
+                "title": "Program",
+                "description": "program number for the program change message"
+              }
+            },
+            "required": ["type", "channel", "program"],
+            "additionalProperties": false
+          },
+          "type": { "const": "midi.program_change.create" }
+        },
+        "$id": "midi.program_change.create",
+        "title": "Create MIDI Prgoram Change Message",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "audioFile": {
+                "type": "string",
+                "title": "Audio File",
+                "description": "path to the audio file to play"
+              },
+              "postWait": {
+                "type": "integer",
+                "title": "Post Wait (ms)",
+                "description": "number of milliseconds to wait after playing the audio"
+              },
+              "preWait": {
+                "type": "integer",
+                "title": "Pre Wait (ms)",
+                "description": "number of milliseconds to wait before playing the audio"
+              }
+            },
+            "required": ["preWait", "postWait", "audioFile"],
+            "additionalProperties": false
+          },
+          "type": { "const": "sip.response.audio.create" }
+        },
+        "$id": "sip.response.audio.create",
+        "title": "Create SIP Audio Response",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Field Name",
+                "description": "name of the struct field to extract"
+              }
+            },
+            "required": ["name"],
+            "additionalProperties": false
+          },
+          "type": { "const": "struct.field.get" }
+        },
+        "$id": "struct.field.get",
+        "title": "Get Struct Field",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "duration": {
+                "type": "integer",
+                "title": "Duration",
+                "description": "time to sleep in milliseconds"
+              }
+            },
+            "required": ["duration"],
+            "additionalProperties": false
+          },
+          "type": { "const": "time.sleep" }
+        },
+        "$id": "time.sleep",
+        "title": "Sleep",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "channel": {
+                "type": "string",
+                "title": "Channel",
+                "description": "channel number for the note off message"
+              },
+              "note": {
+                "type": "string",
+                "title": "Note",
+                "description": "note number for the note off message"
+              },
+              "velocity": {
+                "type": "string",
+                "title": "Velocity",
+                "description": "velocity for the note off message"
+              }
+            },
+            "required": ["channel", "note", "velocity"],
+            "additionalProperties": false
+          },
+          "type": { "const": "midi.note_off.create" }
+        },
+        "$id": "midi.note_off.create",
+        "title": "Create MIDI Note Off Message",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "channel": {
+                "type": "string",
+                "title": "Channel",
+                "description": "channel number for the note on message"
+              },
+              "note": {
+                "type": "string",
+                "title": "Note",
+                "description": "note number for the note on message"
+              },
+              "velocity": {
+                "type": "string",
+                "title": "Velocity",
+                "description": "velocity for the note on message"
+              }
+            },
+            "required": ["channel", "note", "velocity"],
+            "additionalProperties": false
+          },
+          "type": { "const": "midi.note_on.create" }
+        },
+        "$id": "midi.note_on.create",
+        "title": "Create MIDI Note On Message",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "string.encode" } },
+        "$id": "string.encode",
+        "title": "Encode String",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "artnet.packet.decode" } },
+        "$id": "artnet.packet.decode",
+        "title": "Decode ArtNet Packet",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "module": {
+                "type": "string",
+                "title": "Module ID",
+                "description": "ID of the database module to query"
+              },
+              "query": {
+                "type": "string",
+                "title": "Query",
+                "description": "SQL query to execute"
+              }
+            },
+            "required": ["module", "query"],
+            "additionalProperties": false
+          },
+          "type": { "const": "db.query" }
+        },
+        "$id": "db.query",
+        "title": "Query Database",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "filter.change" } },
+        "$id": "filter.change",
+        "title": "Filter On Change",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "bitSize": {
+                "type": "integer",
+                "title": "Bit Size",
+                "description": "bit size of the resulting float",
+                "default": 64,
+                "enum": [32, 64]
+              }
+            },
+            "additionalProperties": false
+          },
+          "type": { "const": "float.parse" }
+        },
+        "$id": "float.parse",
+        "title": "Parse Float",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "bitSize": {
+                "type": "integer",
+                "title": "Bit Size",
+                "description": "bit size of the resulting float",
+                "default": 32,
+                "enum": [32, 64]
+              },
+              "max": {
+                "type": "number",
+                "title": "Maximum",
+                "description": "exclusive maximum value of the random float"
+              },
+              "min": {
+                "type": "number",
+                "title": "Minimum",
+                "description": "inclusive minimum value of the random float"
+              }
+            },
+            "required": ["min", "max"],
+            "additionalProperties": false
+          },
+          "type": { "const": "float.random" }
+        },
+        "$id": "float.random",
+        "title": "Random Float",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "method": {
+                "type": "string",
+                "title": "HTTP Method",
+                "description": "method to use for the HTTP request",
+                "enum": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+              },
+              "url": {
+                "type": "string",
+                "title": "URL",
+                "description": "URL to send the HTTP request to"
+              }
+            },
+            "required": ["method", "url"],
+            "additionalProperties": false
+          },
+          "type": { "const": "http.request.do" }
+        },
+        "$id": "http.request.do",
+        "title": "Do HTTP Request",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "bodyTemplate": {
+                "type": "string",
+                "title": "Body Template",
+                "description": "template for the response body"
+              },
+              "status": {
+                "type": "integer",
+                "title": "Status Code",
+                "description": "status code to set on the response"
+              }
+            },
+            "required": ["status", "bodyTemplate"],
+            "additionalProperties": false
+          },
+          "type": { "const": "http.response.create" }
+        },
+        "$id": "http.response.create",
+        "title": "Create HTTP Response",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "inMax": {
+                "type": "integer",
+                "title": "Input Maximum",
+                "description": "maximum value of the input integer"
+              },
+              "inMin": {
+                "type": "integer",
+                "title": "Input Minimum",
+                "description": "minimum value of the input integer"
+              },
+              "outMax": {
+                "type": "integer",
+                "title": "Output Maximum",
+                "description": "maximum value of the output integer"
+              },
+              "outMin": {
+                "type": "integer",
+                "title": "Output Minimum",
+                "description": "minimum value of the output integer"
+              }
+            },
+            "required": ["inMin", "inMax", "outMin", "outMax"],
+            "additionalProperties": false
+          },
+          "type": { "const": "int.scale" }
+        },
+        "$id": "int.scale",
+        "title": "Scale Int",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "expression": {
+                "type": "string",
+                "title": "Expression",
+                "description": "Expr expression to evaluate, must return a boolean"
+              }
+            },
+            "required": ["expression"],
+            "additionalProperties": false
+          },
+          "type": { "const": "filter.expr" }
+        },
+        "$id": "filter.expr",
+        "title": "Filter by Expr expression",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "rate": {
+                "type": "integer",
+                "title": "Rate",
+                "description": "number of events to allow per second"
+              }
+            },
+            "required": ["rate"]
+          },
+          "type": { "const": "filter.rate" }
+        },
+        "$id": "filter.rate",
+        "title": "Filter by Rate",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "focus": {
+                "type": "string",
+                "title": "Focus",
+                "description": "focus level of the camera"
+              },
+              "id": {
+                "type": "string",
+                "title": "Camera ID",
+                "description": "ID of the camera this FreeD position corresponds to"
+              },
+              "pan": {
+                "type": "string",
+                "title": "Pan",
+                "description": "pan angle of the camera"
+              },
+              "posX": {
+                "type": "string",
+                "title": "Position X",
+                "description": "X coordinate of the camera's position"
+              },
+              "posY": {
+                "type": "string",
+                "title": "Position Y",
+                "description": "Y coordinate of the camera's position"
+              },
+              "posZ": {
+                "type": "string",
+                "title": "Position Z",
+                "description": "Z coordinate of the camera's position"
+              },
+              "roll": {
+                "type": "string",
+                "title": "Roll",
+                "description": "roll angle of the camera"
+              },
+              "tilt": {
+                "type": "string",
+                "title": "Tilt",
+                "description": "tilt angle of the camera"
+              },
+              "zoom": {
+                "type": "string",
+                "title": "Zoom",
+                "description": "zoom level of the camera"
+              }
+            },
+            "required": [
+              "id",
+              "pan",
+              "tilt",
+              "roll",
+              "posX",
+              "posY",
+              "posZ",
+              "zoom",
+              "focus"
+            ],
+            "additionalProperties": false
+          },
+          "type": { "const": "freed.create" }
+        },
+        "$id": "freed.create",
+        "title": "Create FreeD",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "freed.encode" } },
+        "$id": "freed.encode",
+        "title": "Encode FreeD",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "title": "Key",
+                "description": "key to retrieve from the key-value module"
+              },
+              "module": {
+                "type": "string",
+                "title": "Module ID",
+                "description": "ID of the key-value module to get the value from"
+              }
+            },
+            "required": ["module", "key"],
+            "additionalProperties": false
+          },
+          "type": { "const": "kv.get" }
+        },
+        "$id": "kv.get",
+        "title": "Get Key",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "osc.message.decode" } },
+        "$id": "osc.message.decode",
+        "title": "Decode OSC Message",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "osc.message.encode" } },
+        "$id": "osc.message.encode",
+        "title": "Encode OSC Message",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "module": {
+                "type": "string",
+                "title": "Module ID",
+                "description": "ID of the module to publish to"
+              },
+              "topic": {
+                "type": "string",
+                "title": "Topic",
+                "description": "topic to publish to"
+              }
+            },
+            "required": ["module", "topic"],
+            "additionalProperties": false
+          },
+          "type": { "const": "pubsub.publish" }
+        },
+        "$id": "pubsub.publish",
+        "title": "Publish to Pub/Sub Topic",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "pattern": {
+                "type": "string",
+                "title": "Pattern",
+                "description": "regex pattern to match against"
+              }
+            },
+            "required": ["pattern"],
+            "additionalProperties": false
+          },
+          "type": { "const": "filter.regex" }
+        },
+        "$id": "filter.regex",
+        "title": "Filter by Regex",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "freed.decode" } },
+        "$id": "freed.decode",
+        "title": "Decode FreeD",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "json.decode" } },
+        "$id": "json.decode",
+        "title": "Decode JSON",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "midi.message.decode" } },
+        "$id": "midi.message.decode",
+        "title": "Decode MIDI Message",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "program": {
+                "type": "string",
+                "title": "Program",
+                "description": "JavaScript program to run"
+              }
+            },
+            "required": ["program"],
+            "additionalProperties": false
+          },
+          "type": { "const": "script.js" }
+        },
+        "$id": "script.js",
+        "title": "Run JavaScript",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "template": {
+                "type": "string",
+                "title": "Template",
+                "description": "template to evaluate"
+              }
+            },
+            "required": ["template"],
+            "additionalProperties": false
+          },
+          "type": { "const": "string.create" }
+        },
+        "$id": "string.create",
+        "title": "Create String",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "string.decode" } },
+        "$id": "string.decode",
+        "title": "Decode String",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Method Name",
+                "description": "name of the struct method to extract and call (with no arguments)"
+              }
+            },
+            "required": ["name"],
+            "additionalProperties": false
+          },
+          "type": { "const": "struct.method.get" }
+        },
+        "$id": "struct.method.get",
+        "title": "Get Struct Method",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "artnet.packet.encode" } },
+        "$id": "artnet.packet.encode",
+        "title": "Encode ArtNet Packet",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "base": {
+                "type": "integer",
+                "title": "Base",
+                "description": "numerical base to use for parsing the integer",
+                "default": 10,
+                "enum": [0, 2, 8, 10, 16]
+              },
+              "bitSize": {
+                "type": "integer",
+                "title": "Bit Size",
+                "description": "bit size of the resulting integer",
+                "default": 64,
+                "enum": [0, 8, 16, 32, 64]
+              }
+            },
+            "additionalProperties": false
+          },
+          "type": { "const": "int.parse" }
+        },
+        "$id": "int.parse",
+        "title": "Parse Int",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string",
+                "title": "Key",
+                "description": "key to set in the key-value module"
+              },
+              "module": {
+                "type": "string",
+                "title": "Module ID",
+                "description": "ID of the key-value module to set the value in"
+              }
+            },
+            "required": ["module", "key"],
+            "additionalProperties": false
+          },
+          "type": { "const": "kv.set" }
+        },
+        "$id": "kv.set",
+        "title": "Set Key",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "midi.message.encode" } },
+        "$id": "midi.message.encode",
+        "title": "Encode MIDI Message",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "address": {
+                "type": "string",
+                "title": "Address",
+                "description": "OSC address for the message"
+              },
+              "args": {
+                "type": "array",
+                "items": { "type": "string" },
+                "title": "Arguments",
+                "description": "arguments for the OSC message"
+              },
+              "types": {
+                "type": "string",
+                "title": "Argument Types",
+                "description": "string of OSC types corresponding to the arguments in args"
+              }
+            },
+            "required": ["address"],
+            "additionalProperties": false
+          },
+          "type": { "const": "osc.message.create" }
+        },
+        "$id": "osc.message.create",
+        "title": "Create OSC Message",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "expression": {
+                "type": "string",
+                "title": "Expression",
+                "description": "Expr expression to evaluate"
+              }
+            },
+            "required": ["expression"],
+            "additionalProperties": false
+          },
+          "type": { "const": "script.expr" }
+        },
+        "$id": "script.expr",
+        "title": "Evaluate Expr Expression",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "enableWasi": {
+                "type": "boolean",
+                "title": "Enable WASI",
+                "description": "whether to enable WASI when running the WASM plugin",
+                "default": false
+              },
+              "function": {
+                "type": "string",
+                "title": "Function",
+                "description": "exported function to call on the WASM plugin",
+                "default": "process"
+              },
+              "path": {
+                "type": "string",
+                "title": "Path",
+                "description": "path to the WASM plugin to load"
+              }
+            },
+            "required": ["path"],
+            "additionalProperties": false
+          },
+          "type": { "const": "script.wasm" }
+        },
+        "$id": "script.wasm",
+        "title": "Run WASM Plugin",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "separator": {
+                "type": "string",
+                "title": "Separator",
+                "description": "separator to split the string on"
+              }
+            },
+            "required": ["separator"],
+            "additionalProperties": false
+          },
+          "type": { "const": "string.split" }
+        },
+        "$id": "string.split",
+        "title": "Split String",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "midi.message.unpack" } },
+        "$id": "midi.message.unpack",
+        "title": "Unpack MIDI Message",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "max": {
+                "type": "integer",
+                "title": "Maximum",
+                "description": "inclusive maximum value of the random integer"
+              },
+              "min": {
+                "type": "integer",
+                "title": "Minimum",
+                "description": "inclusive minimum value of the random integer"
+              }
+            },
+            "required": ["min", "max"],
+            "additionalProperties": false
+          },
+          "type": { "const": "int.random" }
+        },
+        "$id": "int.random",
+        "title": "Random Int",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "channel": {
+                "type": "string",
+                "title": "Channel",
+                "description": "channel number for the control change message"
+              },
+              "control": {
+                "type": "string",
+                "title": "Control",
+                "description": "control number for the control change message"
+              },
+              "value": {
+                "type": "string",
+                "title": "Value",
+                "description": "value for the control change message"
+              }
+            },
+            "required": ["channel", "control", "value"],
+            "additionalProperties": false
+          },
+          "type": { "const": "midi.control_change.create" }
+        },
+        "$id": "midi.control_change.create",
+        "title": "Create MIDI Control Change Message",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "module": {
+                "type": "string",
+                "title": "Module ID",
+                "description": "ID of module to send output to"
+              }
+            },
+            "required": ["module"],
+            "additionalProperties": false
+          },
+          "type": { "const": "module.output" }
+        },
+        "$id": "module.output",
+        "title": "Module Output",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": { "type": { "const": "debug.log" } },
+        "$id": "debug.log",
+        "title": "Debug Log",
+        "required": ["type"],
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "type": "string",
+                "title": "Source",
+                "description": "source to report as to the router"
+              }
+            },
+            "required": ["source"],
+            "additionalProperties": false
+          },
+          "type": { "const": "router.input" }
+        },
+        "$id": "router.input",
+        "title": "Router Input",
+        "required": ["type", "params"],
+        "additionalProperties": false
+      }
+    ]
+  },
+  "$id": "https://showbridge.io/processors.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Processors",
+  "description": "processor configurations",
+  "default": []
+}
