@@ -15,7 +15,8 @@ The payload is unchanged so whatever is received by this payload is output unles
 ### Example
 
 ```yaml
-- type: pubsub.publish
+- id: publish
+  type: pubsub.publish
   params:
     module: mqtt-out
     topic: "test"

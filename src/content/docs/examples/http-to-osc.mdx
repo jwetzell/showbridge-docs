@@ -23,13 +23,17 @@ modules:
       host: 127.0.0.1
       port: 8000
 routes:
-  - input: http
+  - id: http-to-osc
+    input: http
     processors:
-      - type: osc.message.create    # create OSC message
+      - id: create-osc-message
+        type: osc.message.create    # create OSC message
         params:
           address: "{{.Payload.URL.Path}}"  # template the address from the incoming message
-      - type: osc.message.encode    # turn OSC message into bytes
-      - type: module.output         # output to the udp module
+      - id: encode-osc-message
+        type: osc.message.encode    # turn OSC message into bytes
+      - id: send-osc
+        type: module.output         # output to the udp module
         params:
           module: udp
 `;

@@ -17,7 +17,8 @@ This processor will return an error if any of the required parameters are missin
 Issue a `SELECT` statement to a module with id `sqlite`.
 
 ```yaml
-- type: db.query
+- id: query
+  type: db.query
   params:
     module: sqlite
     query: "SELECT * from users;"

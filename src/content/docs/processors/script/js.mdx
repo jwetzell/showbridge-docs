@@ -19,7 +19,8 @@ This run your JavaScript program in a [sandboxed environment](https://gitlab.com
 Replace all occurrences of `|` with `,` in the payload
 
 ```yaml
-- type: script.js
+- id: javascript
+  type: script.js
   params:
     program: |
       payload = payload.replaceAll('|',',');

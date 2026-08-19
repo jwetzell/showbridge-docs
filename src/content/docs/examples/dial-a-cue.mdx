@@ -23,13 +23,17 @@ modules:
       host: 127.0.0.1
       port: 53000
 routes:
-  - input: sip
+  - id: sip-to-osc
+    input: sip
     processors:
-      - type: osc.message.create
+      - id: create-osc-message
+        type: osc.message.create
         params:
           address: "/cue/{{.Payload.To}}/go"
-      - type: osc.message.encode
-      - type: module.output
+      - id: encode-osc-message
+        type: osc.message.encode
+      - id: send-osc
+        type: module.output
         params:
           module: udp
 `;

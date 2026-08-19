@@ -15,7 +15,8 @@ The `kv.set` processor sets the value of the configured key to the incoming payl
 This will attempt to set the key `hello` using the module with an id of `redis`
 
 ```yaml
-- type: kv.set
+- id: set
+  type: kv.set
   params:
     module: redis
     key: hello

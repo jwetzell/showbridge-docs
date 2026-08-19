@@ -15,7 +15,8 @@ The `filter.expr` processor evaluates an [Expr expression](https://expr-lang.org
 Match a payload great than or equal to 0
 
 ```yaml
-- type: filter.expr
+- id: filter
+  type: filter.expr
   params:
     expression: "Payload >= 0"
 ```
