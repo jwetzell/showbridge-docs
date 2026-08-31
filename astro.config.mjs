@@ -97,22 +97,6 @@ export default defineConfig({
               items: [{ autogenerate: { directory: "modules/serial" } }],
             },
             {
-              label: "SIP",
-              collapsed: true,
-              items: [
-                {
-                  label: "Call",
-                  collapsed: true,
-                  items: [{ autogenerate: { directory: "modules/sip/call" } }],
-                },
-                {
-                  label: "DTMF",
-                  collapsed: true,
-                  items: [{ autogenerate: { directory: "modules/sip/dtmf" } }],
-                },
-              ],
-            },
-            {
               label: "WebSocket",
               collapsed: true,
               items: [{ autogenerate: { directory: "modules/websocket" } }],
@@ -263,40 +247,6 @@ export default defineConfig({
               label: "Script",
               collapsed: true,
               items: [{ autogenerate: { directory: "processors/script" } }],
-            },
-            {
-              label: "SIP",
-              collapsed: true,
-              items: [
-                {
-                  label: "Response",
-                  collapsed: true,
-                  items: [
-                    {
-                      label: "Audio",
-                      collapsed: true,
-                      items: [
-                        {
-                          autogenerate: {
-                            directory: "processors/sip/response/audio",
-                          },
-                        },
-                      ],
-                    },
-                    {
-                      label: "DTMF",
-                      collapsed: true,
-                      items: [
-                        {
-                          autogenerate: {
-                            directory: "processors/sip/response/dtmf",
-                          },
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
             },
             {
               label: "String",
