@@ -1,182 +1,49 @@
 {
-  "type": "array",
+  "$id": "https://showbridge.io/modules.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "default": [],
+  "description": "module configurations",
   "items": {
     "oneOf": [
       {
-        "type": "object",
+        "$id": "mqtt.client",
+        "additionalProperties": false,
         "properties": {
           "id": {
-            "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "type": "string"
           },
           "params": {
-            "type": "object",
-            "properties": {
-              "duration": {
-                "type": "integer",
-                "title": "Duration",
-                "description": "time in milliseconds between emitted events"
-              }
-            },
-            "required": [
-              "duration"
-            ],
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "time.interval"
-          }
-        },
-        "$id": "time.interval",
-        "title": "Interval",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
-            "properties": {
-              "url": {
-                "type": "string",
-                "title": "URL",
-                "description": "the URL of the WebSocket server to connect"
-              }
-            },
-            "required": [
-              "url"
-            ],
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "websocket.client"
-          }
-        },
-        "$id": "websocket.client",
-        "title": "WebSocket Client",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
-            "properties": {
-              "dsn": {
-                "type": "string",
-                "title": "Data Source Name",
-                "description": "the data source name (DSN) for the SQLite database",
-                "minLength": 1
-              }
-            },
-            "required": [
-              "dsn"
-            ],
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "db.sqlite"
-          }
-        },
-        "$id": "db.sqlite",
-        "title": "SQLite Database",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
-            "properties": {
-              "port": {
-                "type": "string",
-                "title": "Port",
-                "description": "the name of the MIDI port to listen to"
-              }
-            },
-            "required": [
-              "port"
-            ],
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "midi.input"
-          }
-        },
-        "$id": "midi.input",
-        "title": "MIDI Input",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
+            "additionalProperties": false,
             "properties": {
               "broker": {
-                "type": "string",
+                "description": "the URL of the MQTT broker to connect to",
                 "title": "Broker URL",
-                "description": "the URL of the MQTT broker to connect to"
+                "type": "string"
               },
               "clientId": {
-                "type": "string",
+                "description": "the client ID to use when connecting to the MQTT broker",
                 "title": "Client ID",
-                "description": "the client ID to use when connecting to the MQTT broker"
+                "type": "string"
               },
               "qos": {
-                "type": "integer",
-                "title": "QoS",
-                "description": "the QoS level to use when publishing messages",
                 "default": 0,
+                "description": "the QoS level to use when publishing messages",
+                "maximum": 2,
                 "minimum": 0,
-                "maximum": 2
+                "title": "QoS",
+                "type": "integer"
               },
               "retained": {
-                "type": "boolean",
-                "title": "Retained",
+                "default": false,
                 "description": "whether to set the retained flag when publishing messages",
-                "default": false
+                "title": "Retained",
+                "type": "boolean"
               },
               "topic": {
-                "type": "string",
+                "description": "an MQTT topic to subscribe to",
                 "title": "Topic",
-                "description": "an MQTT topic to subscribe to"
+                "type": "string"
               }
             },
             "required": [
@@ -184,113 +51,72 @@
               "topic",
               "clientId"
             ],
-            "additionalProperties": false
+            "type": "object"
           },
           "type": {
             "const": "mqtt.client"
           }
         },
-        "$id": "mqtt.client",
-        "title": "MQTT Client",
         "required": [
           "id",
           "type",
           "params"
         ],
-        "additionalProperties": false
+        "title": "MQTT Client",
+        "type": "object"
       },
       {
-        "type": "object",
+        "$id": "nats.client",
+        "additionalProperties": false,
         "properties": {
           "id": {
-            "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "type": "string"
           },
           "params": {
-            "type": "object",
+            "additionalProperties": false,
             "properties": {
               "subject": {
-                "type": "string",
+                "description": "the subject to subscribe to",
                 "title": "Subject",
-                "description": "the subject to subscribe to"
+                "type": "string"
               },
               "url": {
-                "type": "string",
+                "description": "the URL of the NATS server to connect to",
                 "title": "NATS Server URL",
-                "description": "the URL of the NATS server to connect to"
+                "type": "string"
               }
             },
             "required": [
               "url",
               "subject"
             ],
-            "additionalProperties": false
+            "type": "object"
           },
           "type": {
             "const": "nats.client"
           }
         },
-        "$id": "nats.client",
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
         "title": "NATS Client",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
+        "type": "object"
       },
       {
-        "type": "object",
+        "$id": "net.tcp.client",
+        "additionalProperties": false,
         "properties": {
           "id": {
-            "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "type": "string"
           },
           "params": {
-            "type": "object",
-            "properties": {
-              "ip": {
-                "type": "string",
-                "title": "IP",
-                "description": "the IP address to bind the NATS server to",
-                "default": "0.0.0.0"
-              },
-              "port": {
-                "type": "integer",
-                "title": "Port",
-                "description": "the port for the NATS server to listen on",
-                "default": 4222,
-                "minimum": 1024,
-                "maximum": 65535
-              }
-            },
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "nats.server"
-          }
-        },
-        "$id": "nats.server",
-        "title": "NATS Server",
-        "required": [
-          "id",
-          "type"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
+            "additionalProperties": false,
             "properties": {
               "framing": {
-                "type": "string",
-                "title": "Framing Method",
                 "description": "the method used to frame messages over the TCP connection",
                 "enum": [
                   "LF",
@@ -298,169 +124,21 @@
                   "CRLF",
                   "SLIP",
                   "RAW"
-                ]
-              },
-              "ip": {
-                "type": "string",
-                "title": "IP",
-                "description": "the IP address to bind the TCP server to",
-                "default": "0.0.0.0"
-              },
-              "port": {
-                "type": "integer",
-                "title": "Port",
-                "description": "the port for the TCP server to listen on",
-                "minimum": 1024,
-                "maximum": 65535
-              }
-            },
-            "required": [
-              "port",
-              "framing"
-            ],
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "net.tcp.server"
-          }
-        },
-        "$id": "net.tcp.server",
-        "title": "TCP Server",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
-            "properties": {
-              "host": {
-                "type": "string",
-                "title": "Host",
-                "description": "the hostname or IP address of the UDP server to connect to"
-              },
-              "port": {
-                "type": "integer",
-                "title": "Port",
-                "description": "the port of the UDP server to connect to",
-                "minimum": 1,
-                "maximum": 65535
-              }
-            },
-            "required": [
-              "host",
-              "port"
-            ],
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "net.udp.client"
-          }
-        },
-        "$id": "net.udp.client",
-        "title": "UDP Client",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
-            "properties": {
-              "port": {
-                "type": "string",
-                "title": "Port",
-                "description": "the name of the MIDI port to send messages to"
-              }
-            },
-            "required": [
-              "port"
-            ],
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "midi.output"
-          }
-        },
-        "$id": "midi.output",
-        "title": "MIDI Output",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "type": {
-            "const": "psn.client"
-          }
-        },
-        "$id": "psn.client",
-        "title": "PosiStageNet Client",
-        "required": [
-          "id",
-          "type"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
-            "properties": {
-              "framing": {
-                "type": "string",
+                ],
                 "title": "Framing Method",
-                "description": "the method used to frame messages over the TCP connection",
-                "enum": [
-                  "LF",
-                  "CR",
-                  "CRLF",
-                  "SLIP",
-                  "RAW"
-                ]
+                "type": "string"
               },
               "host": {
-                "type": "string",
+                "description": "the hostname or IP address of the TCP server to connect to",
                 "title": "Host",
-                "description": "the hostname or IP address of the TCP server to connect to"
+                "type": "string"
               },
               "port": {
-                "type": "integer",
-                "title": "Port",
                 "description": "the port of the TCP server to connect to",
+                "maximum": 65535,
                 "minimum": 1,
-                "maximum": 65535
+                "title": "Port",
+                "type": "integer"
               }
             },
             "required": [
@@ -468,209 +146,517 @@
               "port",
               "framing"
             ],
-            "additionalProperties": false
+            "type": "object"
           },
           "type": {
             "const": "net.tcp.client"
           }
         },
-        "$id": "net.tcp.client",
-        "title": "TCP Client",
         "required": [
           "id",
           "type",
           "params"
         ],
-        "additionalProperties": false
+        "title": "TCP Client",
+        "type": "object"
       },
       {
-        "type": "object",
+        "$id": "net.tcp.server",
+        "additionalProperties": false,
         "properties": {
           "id": {
-            "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "type": "string"
           },
           "params": {
-            "type": "object",
+            "additionalProperties": false,
             "properties": {
+              "framing": {
+                "description": "the method used to frame messages over the TCP connection",
+                "enum": [
+                  "LF",
+                  "CR",
+                  "CRLF",
+                  "SLIP",
+                  "RAW"
+                ],
+                "title": "Framing Method",
+                "type": "string"
+              },
               "ip": {
-                "type": "string",
+                "default": "0.0.0.0",
+                "description": "the IP address to bind the TCP server to",
                 "title": "IP",
-                "description": "the multicast address to listen on"
+                "type": "string"
               },
               "port": {
-                "type": "integer",
-                "title": "Port",
-                "description": "the port to listen on",
+                "description": "the port for the TCP server to listen on",
+                "maximum": 65535,
                 "minimum": 1024,
-                "maximum": 65535
+                "title": "Port",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "port",
+              "framing"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "net.tcp.server"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "TCP Server",
+        "type": "object"
+      },
+      {
+        "$id": "midi.output",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "port": {
+                "description": "the name of the MIDI port to send messages to",
+                "title": "Port",
+                "type": "string"
+              }
+            },
+            "required": [
+              "port"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "midi.output"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "MIDI Output",
+        "type": "object"
+      },
+      {
+        "$id": "psn.client",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "const": "psn.client"
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "PosiStageNet Client",
+        "type": "object"
+      },
+      {
+        "$id": "db.mysql",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "dsn": {
+                "description": "the connection DSN for the MySQL database",
+                "minLength": 1,
+                "title": "Database DSN",
+                "type": "string"
+              }
+            },
+            "required": [
+              "dsn"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "db.mysql"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "MySQL Database",
+        "type": "object"
+      },
+      {
+        "$id": "nats.server",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "ip": {
+                "default": "0.0.0.0",
+                "description": "the IP address to bind the NATS server to",
+                "title": "IP",
+                "type": "string"
+              },
+              "port": {
+                "default": 4222,
+                "description": "the port for the NATS server to listen on",
+                "maximum": 65535,
+                "minimum": 1024,
+                "title": "Port",
+                "type": "integer"
+              }
+            },
+            "type": "object"
+          },
+          "type": {
+            "const": "nats.server"
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "NATS Server",
+        "type": "object"
+      },
+      {
+        "$id": "redis.client",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "host": {
+                "description": "the hostname or IP address of the Redis server to connect to",
+                "title": "Host",
+                "type": "string"
+              },
+              "port": {
+                "description": "the port to use when connecting to the Redis server",
+                "maximum": 65535,
+                "minimum": 1,
+                "title": "Port",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "host",
+              "port"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "redis.client"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "Redis Client",
+        "type": "object"
+      },
+      {
+        "$id": "time.timer",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "duration": {
+                "description": "time in milliseconds before the timer fires",
+                "title": "Duration",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "duration"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "time.timer"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "Timer",
+        "type": "object"
+      },
+      {
+        "$id": "net.udp.client",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "host": {
+                "description": "the hostname or IP address of the UDP server to connect to",
+                "title": "Host",
+                "type": "string"
+              },
+              "port": {
+                "description": "the port of the UDP server to connect to",
+                "maximum": 65535,
+                "minimum": 1,
+                "title": "Port",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "host",
+              "port"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "net.udp.client"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "UDP Client",
+        "type": "object"
+      },
+      {
+        "$id": "net.udp.multicast",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "ip": {
+                "description": "the multicast address to listen on",
+                "title": "IP",
+                "type": "string"
+              },
+              "port": {
+                "description": "the port to listen on",
+                "maximum": 65535,
+                "minimum": 1024,
+                "title": "Port",
+                "type": "integer"
               }
             },
             "required": [
               "ip",
               "port"
             ],
-            "additionalProperties": false
+            "type": "object"
           },
           "type": {
             "const": "net.udp.multicast"
           }
         },
-        "$id": "net.udp.multicast",
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
         "title": "UDP Multicast",
+        "type": "object"
+      },
+      {
+        "$id": "websocket.client",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "url": {
+                "description": "the URL of the WebSocket server to connect",
+                "title": "URL",
+                "type": "string"
+              }
+            },
+            "required": [
+              "url"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "websocket.client"
+          }
+        },
         "required": [
           "id",
           "type",
           "params"
         ],
-        "additionalProperties": false
+        "title": "WebSocket Client",
+        "type": "object"
       },
       {
-        "type": "object",
+        "$id": "db.postgres",
+        "additionalProperties": false,
         "properties": {
           "id": {
-            "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "type": "string"
           },
           "params": {
-            "type": "object",
+            "additionalProperties": false,
             "properties": {
-              "bufferSize": {
-                "type": "integer",
-                "title": "Buffer Size",
-                "description": "the size of the buffer for incoming UDP messages",
-                "default": 2048,
-                "minimum": 1,
-                "maximum": 65535
-              },
-              "ip": {
-                "type": "string",
-                "title": "IP",
-                "description": "the IP address to bind the UDP server to",
-                "default": "0.0.0.0"
-              },
+              "url": {
+                "description": "the connection URL for the PostgreSQL database",
+                "minLength": 1,
+                "title": "Database URL",
+                "type": "string"
+              }
+            },
+            "required": [
+              "url"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "db.postgres"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "PostgreSQL Database",
+        "type": "object"
+      },
+      {
+        "$id": "db.sqlite",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "dsn": {
+                "description": "the data source name (DSN) for the SQLite database",
+                "minLength": 1,
+                "title": "Data Source Name",
+                "type": "string"
+              }
+            },
+            "required": [
+              "dsn"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "db.sqlite"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "SQLite Database",
+        "type": "object"
+      },
+      {
+        "$id": "midi.input",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
               "port": {
-                "type": "integer",
+                "description": "the name of the MIDI port to listen to",
                 "title": "Port",
-                "description": "the port for the UDP server to listen on",
-                "minimum": 1024,
-                "maximum": 65535
+                "type": "string"
               }
             },
             "required": [
               "port"
             ],
-            "additionalProperties": false
+            "type": "object"
           },
           "type": {
-            "const": "net.udp.server"
+            "const": "midi.input"
           }
         },
-        "$id": "net.udp.server",
-        "title": "UDP Server",
         "required": [
           "id",
           "type",
           "params"
         ],
-        "additionalProperties": false
+        "title": "MIDI Input",
+        "type": "object"
       },
       {
-        "type": "object",
+        "$id": "serial.client",
+        "additionalProperties": false,
         "properties": {
           "id": {
-            "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "type": "string"
           },
           "params": {
-            "type": "object",
-            "properties": {
-              "port": {
-                "type": "integer",
-                "title": "Port",
-                "description": "the port for the HTTP server to listen on",
-                "minimum": 1024,
-                "maximum": 65535
-              }
-            },
-            "required": [
-              "port"
-            ],
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "http.server"
-          }
-        },
-        "$id": "http.server",
-        "title": "HTTP Server",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
-            "properties": {
-              "host": {
-                "type": "string",
-                "title": "Host",
-                "description": "the hostname or IP address of the Redis server to connect to"
-              },
-              "port": {
-                "type": "integer",
-                "title": "Port",
-                "description": "the port to use when connecting to the Redis server",
-                "minimum": 1,
-                "maximum": 65535
-              }
-            },
-            "required": [
-              "host",
-              "port"
-            ],
-            "additionalProperties": false
-          },
-          "type": {
-            "const": "redis.client"
-          }
-        },
-        "$id": "redis.client",
-        "title": "Redis Client",
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "additionalProperties": false
-      },
-      {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
-          "params": {
-            "type": "object",
+            "additionalProperties": false,
             "properties": {
               "baudRate": {
-                "type": "integer",
+                "description": "the baud rate to use when connecting to the serial port",
                 "title": "Baud Rate",
-                "description": "the baud rate to use when connecting to the serial port"
+                "type": "integer"
               },
               "framing": {
-                "type": "string",
-                "title": "Framing Method",
                 "description": "the method to use for framing messages on the serial port",
                 "enum": [
                   "LF",
@@ -678,12 +664,14 @@
                   "CRLF",
                   "SLIP",
                   "RAW"
-                ]
+                ],
+                "title": "Framing Method",
+                "type": "string"
               },
               "port": {
-                "type": "string",
+                "description": "the name of the serial port to connect to",
                 "title": "Port",
-                "description": "the name of the serial port to connect to"
+                "type": "string"
               }
             },
             "required": [
@@ -691,60 +679,142 @@
               "baudRate",
               "framing"
             ],
-            "additionalProperties": false
+            "type": "object"
           },
           "type": {
             "const": "serial.client"
           }
         },
-        "$id": "serial.client",
-        "title": "Serial Client",
         "required": [
           "id",
           "type",
           "params"
         ],
-        "additionalProperties": false
+        "title": "Serial Client",
+        "type": "object"
       },
       {
-        "type": "object",
+        "$id": "time.interval",
+        "additionalProperties": false,
         "properties": {
           "id": {
-            "type": "string",
-            "minLength": 1
+            "minLength": 1,
+            "type": "string"
           },
           "params": {
-            "type": "object",
+            "additionalProperties": false,
             "properties": {
               "duration": {
-                "type": "integer",
+                "description": "time in milliseconds between emitted events",
                 "title": "Duration",
-                "description": "time in milliseconds before the timer fires"
+                "type": "integer"
               }
             },
             "required": [
               "duration"
             ],
-            "additionalProperties": false
+            "type": "object"
           },
           "type": {
-            "const": "time.timer"
+            "const": "time.interval"
           }
         },
-        "$id": "time.timer",
-        "title": "Timer",
         "required": [
           "id",
           "type",
           "params"
         ],
-        "additionalProperties": false
+        "title": "Interval",
+        "type": "object"
+      },
+      {
+        "$id": "net.udp.server",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "bufferSize": {
+                "default": 2048,
+                "description": "the size of the buffer for incoming UDP messages",
+                "maximum": 65535,
+                "minimum": 1,
+                "title": "Buffer Size",
+                "type": "integer"
+              },
+              "ip": {
+                "default": "0.0.0.0",
+                "description": "the IP address to bind the UDP server to",
+                "title": "IP",
+                "type": "string"
+              },
+              "port": {
+                "description": "the port for the UDP server to listen on",
+                "maximum": 65535,
+                "minimum": 1024,
+                "title": "Port",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "port"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "net.udp.server"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "UDP Server",
+        "type": "object"
+      },
+      {
+        "$id": "http.server",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "port": {
+                "description": "the port for the HTTP server to listen on",
+                "maximum": 65535,
+                "minimum": 1024,
+                "title": "Port",
+                "type": "integer"
+              }
+            },
+            "required": [
+              "port"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "http.server"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "HTTP Server",
+        "type": "object"
       }
     ]
   },
-  "$id": "https://showbridge.io/modules.schema.json",
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Modules",
-  "description": "module configurations",
-  "default": []
+  "type": "array"
 }

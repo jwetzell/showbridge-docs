@@ -1,0 +1,24 @@
+---
+title: PostgreSQL
+sidebar:
+  order: 1
+---
+import SchemaInfo from '../../../../components/SchemaInfo.astro';
+
+The `db.postgres` module can open a connection to PostgreSQL databases
+
+<SchemaInfo type="module" id="db.postgres"></SchemaInfo>
+
+This module implements the `DatabaseModule` interface.
+
+
+### Example
+
+Opens a connection to a PostgreSQL database
+
+```yaml
+- id: myDatabase
+  type: db.postgres
+  params:
+    url: "postgresql://user:password@localhost:5432/mydatabase"
+```
