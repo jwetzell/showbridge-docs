@@ -226,6 +226,11 @@ export default defineConfig({
               items: [{ autogenerate: { directory: "processors/module" } }],
             },
             {
+              label: "OS",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "processors/os" } }],
+            },
+            {
               label: "OSC",
               collapsed: true,
               items: [
