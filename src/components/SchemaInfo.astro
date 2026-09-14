@@ -1,23 +1,71 @@
 ---
-import moduleSchema from '../data/modules.schema.json';
-import processorSchema from '../data/processors.schema.json';
-import Params from './Params.astro';
-const {type, id} = Astro.props;
+import { Code } from "astro:components";
+import moduleSchema from "../data/modules.schema.json";
+import processorSchema from "../data/processors.schema.json";
+import Params from "./Params.astro"; // not needet
+const { type, id } = Astro.props;
 var schema;
+let yamlCode = "";
 
-switch(type) {
-    case 'module':
-        schema = moduleSchema.items?.oneOf?.find(schema=>schema["$id"] === id);
-        break;
-    case 'processor':
-        schema = processorSchema.items?.oneOf?.find(schema=>schema["$id"] === id);
-        break;
+switch (type) {
+  case "module":
+    schema = moduleSchema.items?.oneOf?.find((schema) => schema["$id"] === id);
+    break;
+  case "processor":
+    schema = processorSchema.items?.oneOf?.find(
+      (schema) => schema["$id"] === id,
+    );
+    break;
+}
+
+if (schema) {
+  yamlCode += `### ${schema.title} ###\n`;
+  schema.required
+    ? (yamlCode += `# Required: ${schema.required.join(", ")}\n`)
+    : "";
+  schema.additionalProperties
+    ? (yamlCode += `# Additonal Properties: ${schema.additionalProperties}\n`)
+    : "";
+  schema.properties
+    ? (yamlCode += `id: my${schema.title.replace(/\s/g, "")}\n`)
+    : "";
+
+  schema.properties?.type?.const
+    ? (yamlCode += `type: ${schema.properties.type.const}\n`)
+    : "";
+
+  if (schema.properties?.params?.properties) {
+    yamlCode += `params: `;
+
+    schema.properties.params.required
+      ? (yamlCode += `# Required: ${schema.properties.params.required.join(", ")}\n`)
+      : "\n";
+    schema.properties.params.additionalProperties
+      ? (yamlCode += `# Additonal Properties: ${schema.properties.params.additionalProperties}\n`)
+      : "";
+
+    const params = schema.properties.params.properties;
+    for (const [key, value] of Object.entries(params)) {
+      let comment = `(${value.type}) `
+      if (value.enum) {
+        comment += `(Options: ${value.enum.join(", ")}) `;
+      }
+      comment += value.description || value.title || "";
+
+      let placeholder = '""';
+      if (value.type === "integer") placeholder = "8080";
+      if (value.enum) placeholder = `"${value.enum[0]}"`;
+
+      yamlCode += `  ${key}: ${placeholder} # ${comment}\n`;
+    }
+  }
 }
 ---
+
 {
-schema !== undefined && 
-    <ul>
-        {schema.properties.type !== undefined && <li><strong>type</strong>:&nbsp;<code>{schema.properties.type.const}</code></li>}
-        {schema.properties.params !== undefined && <li><strong>params</strong>:<Params schema={schema.properties.params}/></li>}
-    </ul>
+  schema && (
+    <div class="schema-docs">
+      <Code code={yamlCode} lang="yaml" theme="github-dark" />
+    </div>
+  )
 }
