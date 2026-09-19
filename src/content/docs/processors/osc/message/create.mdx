@@ -19,6 +19,9 @@ Create an OSC message with the address `/test/message` and two integer arguments
   type: osc.message.create
   params:
     address: "/test/message"
-    args: ["{{.Payload[0]}}", "{{.Payload[1]}}"]
-    types: "ii"
+    args:
+      - value: "{{.Payload[0]}}"
+        type: "i"
+      - value: "{{.Payload[1]}}"
+        type: "i"
 ```

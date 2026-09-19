@@ -1174,15 +1174,27 @@
               "args": {
                 "description": "arguments for the OSC message",
                 "items": {
-                  "type": "string"
+                  "additionalProperties": false,
+                  "properties": {
+                    "type": {
+                      "description": "OSC type of the argument",
+                      "title": "Type",
+                      "type": "string"
+                    },
+                    "value": {
+                      "description": "Value of the argument",
+                      "title": "Value",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "type"
+                  ],
+                  "type": "object"
                 },
                 "title": "Arguments",
                 "type": "array"
-              },
-              "types": {
-                "description": "string of OSC types corresponding to the arguments in args",
-                "title": "Argument Types",
-                "type": "string"
               }
             },
             "required": [
