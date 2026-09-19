@@ -1088,6 +1088,74 @@
         "type": "object"
       },
       {
+        "$id": "os.readfile",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "description": "the path of the file to read",
+                "title": "Path",
+                "type": "string"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "os.readfile"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "Read File",
+        "type": "object"
+      },
+      {
+        "$id": "os.writefile",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "description": "the path of the file to write to",
+                "title": "Path",
+                "type": "string"
+              }
+            },
+            "required": [
+              "path"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "os.writefile"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "Write File",
+        "type": "object"
+      },
+      {
         "$id": "osc.message.create",
         "additionalProperties": false,
         "properties": {
@@ -1566,6 +1634,44 @@
           "params"
         ],
         "title": "Sleep",
+        "type": "object"
+      },
+      {
+        "$id": "yaml.decode",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "const": "yaml.decode"
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "Decode YAML",
+        "type": "object"
+      },
+      {
+        "$id": "yaml.encode",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": {
+            "const": "yaml.encode"
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "title": "Encode YAML",
         "type": "object"
       }
     ]

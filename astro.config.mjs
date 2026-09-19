@@ -263,6 +263,11 @@ export default defineConfig({
               collapsed: true,
               items: [{ autogenerate: { directory: "processors/time" } }],
             },
+            {
+              label: "YAML",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "processors/yaml" } }],
+            },
           ],
         },
         {
