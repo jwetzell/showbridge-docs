@@ -6,111 +6,6 @@
   "items": {
     "oneOf": [
       {
-        "$id": "db.mysql",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "params": {
-            "additionalProperties": false,
-            "properties": {
-              "dsn": {
-                "description": "the connection DSN for the MySQL database",
-                "minLength": 1,
-                "title": "Database DSN",
-                "type": "string"
-              }
-            },
-            "required": [
-              "dsn"
-            ],
-            "type": "object"
-          },
-          "type": {
-            "const": "db.mysql"
-          }
-        },
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "title": "MySQL Database",
-        "type": "object"
-      },
-      {
-        "$id": "db.postgres",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "params": {
-            "additionalProperties": false,
-            "properties": {
-              "url": {
-                "description": "the connection URL for the PostgreSQL database",
-                "minLength": 1,
-                "title": "Database URL",
-                "type": "string"
-              }
-            },
-            "required": [
-              "url"
-            ],
-            "type": "object"
-          },
-          "type": {
-            "const": "db.postgres"
-          }
-        },
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "title": "PostgreSQL Database",
-        "type": "object"
-      },
-      {
-        "$id": "db.sqlite",
-        "additionalProperties": false,
-        "properties": {
-          "id": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "params": {
-            "additionalProperties": false,
-            "properties": {
-              "dsn": {
-                "description": "the data source name (DSN) for the SQLite database",
-                "minLength": 1,
-                "title": "Data Source Name",
-                "type": "string"
-              }
-            },
-            "required": [
-              "dsn"
-            ],
-            "type": "object"
-          },
-          "type": {
-            "const": "db.sqlite"
-          }
-        },
-        "required": [
-          "id",
-          "type",
-          "params"
-        ],
-        "title": "SQLite Database",
-        "type": "object"
-      },
-      {
         "$id": "http.server",
         "additionalProperties": false,
         "properties": {
@@ -272,6 +167,41 @@
           "params"
         ],
         "title": "MQTT Client",
+        "type": "object"
+      },
+      {
+        "$id": "mysql.client",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "dsn": {
+                "description": "the connection DSN for the MySQL database",
+                "minLength": 1,
+                "title": "Database DSN",
+                "type": "string"
+              }
+            },
+            "required": [
+              "dsn"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "mysql.client"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "MySQL Client",
         "type": "object"
       },
       {
@@ -598,6 +528,41 @@
         "type": "object"
       },
       {
+        "$id": "postgres.client",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "url": {
+                "description": "the connection URL for the PostgreSQL database",
+                "minLength": 1,
+                "title": "Database URL",
+                "type": "string"
+              }
+            },
+            "required": [
+              "url"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "postgres.client"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "PostgreSQL Client",
+        "type": "object"
+      },
+      {
         "$id": "psn.client",
         "additionalProperties": false,
         "properties": {
@@ -709,6 +674,75 @@
           "params"
         ],
         "title": "Serial Client",
+        "type": "object"
+      },
+      {
+        "$id": "sqlite.client",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "dsn": {
+                "description": "the data source name (DSN) for the SQLite database",
+                "minLength": 1,
+                "title": "Data Source Name",
+                "type": "string"
+              }
+            },
+            "required": [
+              "dsn"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "sqlite.client"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "SQLite Client",
+        "type": "object"
+      },
+      {
+        "$id": "time.cron",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "params": {
+            "additionalProperties": false,
+            "properties": {
+              "cron": {
+                "description": "cron expression specifying the schedule",
+                "title": "Cron Spec",
+                "type": "string"
+              }
+            },
+            "required": [
+              "cron"
+            ],
+            "type": "object"
+          },
+          "type": {
+            "const": "time.cron"
+          }
+        },
+        "required": [
+          "id",
+          "type",
+          "params"
+        ],
+        "title": "Cron",
         "type": "object"
       },
       {
