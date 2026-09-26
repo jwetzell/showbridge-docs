@@ -1,13 +1,14 @@
 ---
-title: SQLite
+title: SQLite Client
 sidebar:
+  label: Client
   order: 1
 ---
 import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
-The `db.sqlite` module can open/create SQLite databases
+The `sqlite.client` module can open/create SQLite databases
 
-<SchemaInfo type="module" id="db.sqlite"></SchemaInfo>
+<SchemaInfo type="module" id="sqlite.client"></SchemaInfo>
 
 This module implements the `DatabaseModule` interface.
 
@@ -18,7 +19,7 @@ Opens an in-memory SQLite database
 
 ```yaml
 - id: myDatabase
-  type: db.sqlite
+  type: sqlite.client
   params:
     dsn: ":memory:"
 ```

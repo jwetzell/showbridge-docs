@@ -36,11 +36,6 @@ export default defineConfig({
           label: "Modules",
           items: [
             {
-              label: "Database",
-              collapsed: true,
-              items: [{ autogenerate: { directory: "modules/db" } }],
-            },
-            {
               label: "HTTP",
               collapsed: true,
               items: [{ autogenerate: { directory: "modules/http" } }],
@@ -54,6 +49,11 @@ export default defineConfig({
               label: "MQTT",
               collapsed: true,
               items: [{ autogenerate: { directory: "modules/mqtt" } }],
+            },
+            {
+              label: "MySQL",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "modules/mysql" } }],
             },
             {
               label: "NATS",
@@ -77,6 +77,11 @@ export default defineConfig({
               ],
             },
             {
+              label: "PostgreSQL",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "modules/postgres" } }],
+            },
+            {
               label: "PosiStageNet",
               collapsed: true,
               items: [{ autogenerate: { directory: "modules/psn" } }],
@@ -95,6 +100,11 @@ export default defineConfig({
               label: "Serial",
               collapsed: true,
               items: [{ autogenerate: { directory: "modules/serial" } }],
+            },
+            {
+              label: "SQLite",
+              collapsed: true,
+              items: [{ autogenerate: { directory: "modules/sqlite" } }],
             },
             {
               label: "WebSocket",

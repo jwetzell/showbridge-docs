@@ -1,13 +1,14 @@
 ---
-title: PostgreSQL
+title: PostgreSQL Client
 sidebar:
+  label: Client
   order: 1
 ---
 import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
-The `db.postgres` module can open a connection to PostgreSQL databases
+The `postgres.client` module can open a connection to PostgreSQL databases
 
-<SchemaInfo type="module" id="db.postgres"></SchemaInfo>
+<SchemaInfo type="module" id="postgres.client"></SchemaInfo>
 
 This module implements the `DatabaseModule` interface.
 
@@ -18,7 +19,7 @@ Opens a connection to a PostgreSQL database
 
 ```yaml
 - id: myDatabase
-  type: db.postgres
+  type: postgres.client
   params:
     url: "postgresql://user:password@localhost:5432/mydatabase"
 ```

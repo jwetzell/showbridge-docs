@@ -1,13 +1,14 @@
 ---
-title: MySQL
+title: MySQL Client
 sidebar:
+  label: Client
   order: 1
 ---
 import SchemaInfo from '../../../../components/SchemaInfo.astro';
 
-The `db.mysql` module can open a connection to MySQL databases
+The `mysql.client` module can open a connection to MySQL databases
 
-<SchemaInfo type="module" id="db.mysql"></SchemaInfo>
+<SchemaInfo type="module" id="mysql.client"></SchemaInfo>
 
 This module implements the `DatabaseModule` interface.
 
@@ -18,7 +19,7 @@ Opens a connection to a MySQL database
 
 ```yaml
 - id: myDatabase
-  type: db.mysql
+  type: mysql.client
   params:
     dsn: "user:password@tcp(localhost:3306)/mydatabase"
 ```
